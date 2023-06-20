@@ -1,0 +1,68 @@
+// LANGUAGE
+// ARROW SVG
+
+.language-box-active {
+  background-color: #b3b3b3b5;
+}
+
+.language-box {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+  padding: 0.5rem 1rem;
+  position: relative;
+
+  // OPTIONA LANG
+  &--optional {
+    & ul {
+      left: 0;
+      bottom: -5rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      list-style: none;
+      position: absolute;
+      width: 100%;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-color: #b3b3b3b5;
+      color: #fff;
+
+      border-top: solid #fff 2px;
+    }
+    & li {
+      padding: 0.1rem 0;
+    }
+    & li:not(:last-child) {
+      border-bottom: solid #fff 1px;
+    }
+  }
+
+  &:hover {
+    background-color: #b3b3b3b5;
+  }
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.dark-text {
+  color: #333333;
+}
+
+.svg-box {
+  display: flex;
+}
+.svg {
+  stroke: #fff;
+  height: 3rem;
+}
+.dark-svg {
+  stroke: #333333;
+}
+.language-lang {
+  display: inline-block;
+  padding: 0 1rem;
+}

@@ -1,0 +1,17 @@
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0 15%,
+    rgba(0, 0, 0, 0) 50% 100%
+  );
+  &--img-box {
+  }
+  &--img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: -1;
+  }
+}

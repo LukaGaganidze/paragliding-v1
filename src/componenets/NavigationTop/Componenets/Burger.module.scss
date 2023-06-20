@@ -1,0 +1,21 @@
+// BURGER MENU
+.burger-box {
+  width: 4rem;
+  cursor: pointer;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  &--span {
+    display: inline-block;
+    height: 0.5rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+  &--span-dark {
+    background-color: #333333;
+  }
+}

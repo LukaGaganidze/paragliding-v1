@@ -1,0 +1,53 @@
+// NAVIGATION LINKS
+.link-box {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+  align-items: center;
+}
+.link {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s;
+}
+.link:link,
+.link:visited {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.link:hover,
+.link:active {
+  color: #cccccc;
+  font-size: 2rem;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// WHEN ITS STICKY
+.dark-text:link,
+.dark-text:visited {
+  color: #333333;
+  font-size: 2rem;
+}
+.dark-text:hover,
+.dark-text:active {
+  color: #666666;
+  font-size: 2rem;
+}
