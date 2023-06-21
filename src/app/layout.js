@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>
+      <body className={`${oswald.className}`}>
         <TopNavigation />
         <main>{children}</main>
         <Footer />

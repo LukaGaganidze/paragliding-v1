@@ -1,0 +1,55 @@
+.icons {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  &--individual {
+    width: 5rem;
+    background-color: red;
+    height: 5rem;
+    cursor: pointer;
+    position: relative;
+    &:hover .icons--individual--hover {
+      transform: translateX(-8.5rem);
+    }
+
+    &--hover {
+      position: absolute;
+      top: 0;
+      background-color: red;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      width: 9rem;
+      transform: translateX(0);
+      z-index: -1;
+      color: #fff;
+      transition: all 0.4s;
+
+      &--viber {
+        background-color: #645cac;
+      }
+
+      &--telegram {
+        background-color: #1a8adb;
+      }
+
+      &--whatsapp {
+        background-color: #29a718;
+      }
+    }
+  }
+
+  &--individual--img {
+    width: 100%;
+    height: auto;
+  }
+}

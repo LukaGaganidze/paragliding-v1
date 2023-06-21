@@ -4,6 +4,7 @@
   height: 8rem;
   width: 100%;
   position: absolute;
+  z-index: 1000;
 }
 
 // NAVIGATION
@@ -24,7 +25,7 @@
 // STICKY STYLES
 .sticky {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
   height: 8rem;
 
