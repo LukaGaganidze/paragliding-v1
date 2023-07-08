@@ -1,0 +1,52 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.book-flight {
+  & h2 {
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: solid a.$main-color-red;
+    margin-bottom: b.$margin-small-3;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: b.$margin-small-3;
+
+    & span:first-child {
+      font-size: b.$font-size-regular;
+    }
+    & span:last-child {
+      font-size: b.$font-size-small-1;
+    }
+  }
+  &__link-box {
+    transition: all 0.4s;
+    width: max-content;
+  }
+  &__link-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 10px 25px 1px rgba(255, 255, 255, 0.2);
+  }
+  &__link,
+  &__link:link,
+  &__link:visited {
+    color: a.$main-color-white;
+    font-size: b.$font-size-mid;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: solid a.$main-color-white;
+    padding: 0rem 2rem 0.5rem 2rem;
+    border-radius: 1rem;
+    transition: all 0.4s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    transform: translateY(2rem);
+    background-color: a.$main-color-white;
+    color: a.$main-color-black;
+  }
+}

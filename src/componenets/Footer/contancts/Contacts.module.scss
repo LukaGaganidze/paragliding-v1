@@ -1,0 +1,68 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.contacts {
+  & h2 {
+    padding-left: b.$margin-small-1;
+    margin-bottom: b.$margin-small;
+    border-left: solid a.$main-color-red;
+  }
+}
+
+.info-box {
+  list-style: none;
+  margin-top: b.$margin-small-2;
+
+  & li:not(:last-child) {
+    margin-bottom: b.$margin-small-1;
+  }
+  &__info,
+  &__info:link,
+  &__info:visited {
+    color: a.$main-color-white;
+    transition: all 0.4s;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: max-content;
+  }
+  &__info:hover,
+  &__info:active {
+    color: a.$main-color-red;
+    transform: scale(1.05);
+  }
+  &__svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  // exception
+  &__place {
+    font-size: b.$font-size-small-1;
+  }
+}
+
+// CONTANCT
+.icons-box {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: b.$margin-small-1;
+  border-bottom: solid a.$main-color-red 1px;
+
+  &__link {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: a.$main-color-red;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

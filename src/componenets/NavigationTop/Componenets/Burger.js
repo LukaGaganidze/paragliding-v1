@@ -1,10 +1,17 @@
+"use client";
+
 import React from "react";
 
 import classes from "./Burger.module.scss";
 
+import { useMenuContext } from "@/context/MenuContext";
+
 const Burger = ({ sticky }) => {
+  // GLOBAL CONTEXT
+  const { openMenu } = useMenuContext();
+
   return (
-    <div className={classes["burger-box"]}>
+    <div onClick={openMenu} className={classes["burger-box"]}>
       <div className={classes["burger"]}>
         <span
           className={`${classes["burger--span"]} ${

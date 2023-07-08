@@ -1,7 +1,10 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
 // NAVIGATION LINKS
 .link-box {
   display: flex;
-  gap: 5rem;
+  gap: b.$margin-mid-3;
   list-style: none;
   align-items: center;
 }
@@ -13,13 +16,13 @@
 .link:link,
 .link:visited {
   color: #fff;
-  font-size: 2rem;
+  font-size: b.$font-size-mid;
 }
 
 .link:hover,
 .link:active {
-  color: #cccccc;
-  font-size: 2rem;
+  color: a.$text-color-white-1;
+  font-size: b.$font-size-mid;
 }
 
 .link::after {
@@ -30,7 +33,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: red;
+  background-color: a.$main-color-red;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -43,11 +46,11 @@
 // WHEN ITS STICKY
 .dark-text:link,
 .dark-text:visited {
-  color: #333333;
-  font-size: 2rem;
+  color: a.$grey;
+  font-size: b.$font-size-mid;
 }
 .dark-text:hover,
 .dark-text:active {
-  color: #666666;
-  font-size: 2rem;
+  color: a.$grey-2;
+  font-size: b.$font-size-mid;
 }

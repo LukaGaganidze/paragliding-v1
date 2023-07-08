@@ -1,3 +1,6 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
 // BURGER MENU
 .burger-box {
   width: 4rem;
@@ -8,14 +11,15 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+
   &--span {
     display: inline-block;
     height: 0.5rem;
     width: 100%;
-    background-color: #fff;
-    border-radius: 1rem;
+    background-color: a.$main-color-white;
+    border-radius: b.$border-radius-mid;
   }
   &--span-dark {
-    background-color: #333333;
+    background-color: a.$grey;
   }
 }

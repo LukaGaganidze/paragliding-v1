@@ -11,7 +11,7 @@ const NavLinks = ({ sticky }) => {
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
-          href="/"
+          href="/book"
         >
           Book Flight
         </Link>
@@ -21,7 +21,7 @@ const NavLinks = ({ sticky }) => {
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
-          href="/new"
+          href="/info"
         >
           Flight Info
         </Link>

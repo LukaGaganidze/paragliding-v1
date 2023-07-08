@@ -1,0 +1,84 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+.flight {
+  height: 69rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: b.$container-large-1;
+  margin: 0 auto;
+
+  &__heading {
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    flex-direction: column;
+
+    &__highlited {
+      font-size: b.$font-size-large-3;
+      color: a.$dark-white;
+      letter-spacing: 3px;
+      font-style: italic;
+    }
+    &__highlited-booking {
+      font-size: b.$font-size-large-2;
+      letter-spacing: 3px;
+      padding-left: 1.1rem;
+    }
+    &__normal {
+      color: a.$light-black;
+      font-weight: 300;
+      letter-spacing: 3px;
+      padding-left: 1.1rem;
+    }
+  }
+  &__featured {
+    display: flex;
+    justify-content: space-between;
+    width: b.$container-large;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+
+    & li {
+      list-style: none;
+    }
+    &__li:nth-child(2) {
+      box-shadow: 0 0 0px 25px rgba(172, 255, 47, 0.35);
+      background-color: rgba(172, 255, 47, 0.35);
+      border-radius: 1px;
+    }
+  }
+}
+
+// FADE IN
+
+.season-in {
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(10rem);
+
+  &__active {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+// optional
+.winter-heading {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    a.$winter-color-dark,
+    a.$winter-color-light
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.summer-heading {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    a.$summer-color-coral,
+    a.$summer-color-turquoise
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

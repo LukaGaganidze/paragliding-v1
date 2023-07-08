@@ -1,3 +1,5 @@
+@use "../../scss/abstracts" as a;
+
 .icons {
   position: fixed;
   z-index: 1;
@@ -11,7 +13,7 @@
 
   &--individual {
     width: 5rem;
-    background-color: red;
+    background-color: a.$main-color-red;
     height: 5rem;
     cursor: pointer;
     position: relative;
@@ -22,7 +24,7 @@
     &--hover {
       position: absolute;
       top: 0;
-      background-color: red;
+      background-color: a.$main-color-red;
       height: 100%;
       display: flex;
       align-items: center;
@@ -31,19 +33,19 @@
       width: 9rem;
       transform: translateX(0);
       z-index: -1;
-      color: #fff;
+      color: a.$main-color-white;
       transition: all 0.4s;
 
       &--viber {
-        background-color: #645cac;
+        background-color: a.$color-vber;
       }
 
       &--telegram {
-        background-color: #1a8adb;
+        background-color: a.$color-telegram;
       }
 
       &--whatsapp {
-        background-color: #29a718;
+        background-color: a.$color-whatsapp;
       }
     }
   }

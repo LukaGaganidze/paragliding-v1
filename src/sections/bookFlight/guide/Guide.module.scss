@@ -1,0 +1,130 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.guide-sec {
+  width: b.$container-large-1;
+  margin: b.$margin-large-5 auto 0 auto;
+
+  & h2 {
+    font-size: b.$font-size-large-3;
+    margin-bottom: b.$margin-mid;
+    position: relative;
+    font-weight: 100;
+
+    & span {
+      position: absolute;
+      top: -18rem;
+      left: -10rem;
+      z-index: -1;
+      color: rgba($color: a.$heading-color-d-white-2, $alpha: 1);
+      font-size: 25rem;
+    }
+  }
+}
+
+.step {
+  width: b.$container-large;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: rgba(a.$dark-white, $alpha: 0.5);
+  display: grid;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+  &__img-box {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text-box {
+    position: relative;
+
+    & h3 {
+      letter-spacing: 3px;
+      font-size: b.$font-size-large-1;
+      font-weight: 100;
+    }
+    &__abs-num {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -54%);
+      font-size: 65rem;
+      color: a.$heading-color-d-white-2;
+      z-index: -1;
+      font-style: italic;
+    }
+  }
+}
+
+// INDIVIDUAL BOXESS
+.step-1,
+.step-3 {
+  gap: 6rem;
+  &__img-box {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  &__text-box {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.step-1 {
+  &__text-box {
+    & a,
+    & a:link,
+    & a:visited {
+      color: a.$main-color-red;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    &__whatsapp:hover,
+    &__whatsapp:active {
+      color: a.$color-whatsapp !important;
+      text-decoration: underline;
+    }
+    &__viber:hover,
+    &__viber:active {
+      color: a.$color-vber !important;
+      text-decoration: underline;
+    }
+    &__telegram:hover,
+    &__telegram:active {
+      color: a.$color-telegram !important;
+      text-decoration: underline;
+    }
+  }
+}
+.step-2 {
+  gap: 6rem;
+
+  &__img-box {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  &__text-box {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.step-3 {
+  &__text-box {
+    &__abs-num {
+      font-size: 40rem;
+      transform: translate(-50%, -63%);
+    }
+  }
+}

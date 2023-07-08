@@ -1,0 +1,208 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+
+.card {
+  // FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  width: b.$container-small;
+  height: 52rem;
+
+  &__book-now {
+    font-size: b.$font-size-large;
+    color: a.$main-color-white;
+    letter-spacing: 1px;
+    border-bottom: solid a.$main-color-white;
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      border-bottom: solid a.$main-color-red;
+    }
+  }
+
+  &__side {
+    height: 52rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(a.$main-color-black, 0.15);
+
+    &--front {
+      background-color: a.$main-color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          a.$summer-color-coral,
+          a.$summer-color-turquoise
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    overflow: hidden;
+    height: 19rem;
+    background-image: linear-gradient(
+      to right bottom,
+      a.$summer-color-coral,
+      a.$summer-color-turquoise
+    );
+
+    &__img {
+      opacity: 0.7;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: b.$font-size-regular;
+        padding: 1rem;
+        color: a.$grey-1;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid a.$grey-1;
+        }
+      }
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: a.$main-color-white;
+    margin-bottom: b.$margin-large-2;
+  }
+
+  &__price-only {
+    font-size: b.$font-size-small-3;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: b.$font-size-large-3;
+    font-weight: 100;
+  }
+}
+
+// HOVER ON BOOK NOW
+.book-now-box {
+  margin-bottom: b.$margin-mid-1;
+}
+.book-now,
+.book-now:link,
+.book-now:visited {
+  color: a.$main-color-white;
+  font-size: b.$font-size-large;
+  font-weight: 200;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  padding: 0.2rem 2rem;
+  border: solid rgba(a.$main-color-white, 0.15);
+  transition: all 0.4s;
+}
+.book-now::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.book-now:hover,
+.book-now:active {
+  border: solid transparent;
+  background: linear-gradient(
+    to top,
+    a.$summer-color-turquoise,
+    a.$summer-color-coral
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.book-now:hover::after,
+.book-now:active::after {
+  background-color: a.$main-color-white;
+}
+
+// HOVER ON MORE INFO
+.more-info,
+.more-info:link,
+.more-info:visited {
+  color: a.$main-color-white;
+  font-size: b.$font-size-mid;
+  font-weight: 200;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.more-info:hover,
+.more-info:active {
+  color: a.$main-color-red;
+}
+
+.more-info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: a.$main-color-red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.more-info:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

@@ -1,0 +1,151 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base/" as b;
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0 10%,
+    rgba(0, 0, 0, 0.3) 40% 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: column;
+
+  &__img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    & img {
+      width: 100%;
+      height: auto;
+      transform: translateY(-5rem);
+    }
+  }
+}
+
+.heading {
+  font-size: b.$font-size-large-2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: a.$main-color-white;
+
+  animation-name: from-left;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+
+  &__text-box {
+    display: flex;
+    gap: b.$margin-small-1;
+  }
+}
+
+.steps {
+  display: flex;
+  gap: b.$margin-mid;
+  font-size: b.$font-size-large;
+  background-color: rgba($color: a.$dark-white, $alpha: 0.25);
+  padding: 1.3rem 2rem 2rem 2rem;
+  color: a.$main-color-white;
+  letter-spacing: 1px;
+  border-radius: 3rem;
+
+  animation-name: from-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: b.$margin-small-2;
+
+    &__num {
+      display: inline-block;
+      transform: scale(2);
+      color: a.$main-color-red;
+    }
+
+    &__desc {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      background: linear-gradient(
+        to right,
+        a.$summer-color-coral,
+        a.$main-color-white 100%
+      );
+      background-position: 0 100%;
+      background-size: 100% 2px;
+      background-repeat: repeat-x;
+    }
+  }
+}
+
+.svg-containter {
+  &__svg {
+    height: 12rem;
+    width: 12rem;
+    stroke: rgba($color: a.$main-color-white, $alpha: 0.6);
+    cursor: pointer;
+    border: solid rgba($color: a.$main-color-white, $alpha: 0.2);
+    border-radius: 50%;
+    margin-top: b.$margin-mid;
+
+    transition: all 0.4s;
+    animation-name: from-bot;
+    animation-duration: 1s;
+
+    &:hover {
+      transform: rotate(180deg);
+      stroke: a.$main-color-white;
+      border: solid rgba($color: a.$main-color-white, $alpha: 1);
+    }
+  }
+}
+
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes from-bot {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0rem);
+  }
+}

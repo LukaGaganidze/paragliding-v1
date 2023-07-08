@@ -1,0 +1,40 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.menu {
+  & h2 {
+    border-left: solid a.$main-color-red;
+    padding: 0 1rem;
+    margin-bottom: b.$margin-small-3;
+  }
+
+  & ul {
+    list-style: none;
+
+    li {
+      letter-spacing: 1px;
+      border-left: solid transparent 1px;
+      transition: all 0.4s;
+
+      &:hover {
+        border-left: solid rgba(a.$main-color-red, $alpha: 0.5) 1px;
+      }
+    }
+    li:not(:last-child) {
+      margin-bottom: b.$margin-small;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      display: inline-block;
+      color: a.$main-color-white;
+      border-left: solid transparent;
+      transition: all 0.4s;
+    }
+    a:hover,
+    a:active {
+      transform: translateX(1rem);
+    }
+  }
+}

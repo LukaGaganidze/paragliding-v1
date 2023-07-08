@@ -1,0 +1,66 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+// NAVIGATION LINKS
+.link-box {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  width: b.$container-large-1;
+  margin: 2rem auto 0 auto;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s;
+  width: 24rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  color: a.$main-color-white;
+  font-size: b.$font-size-large;
+}
+
+.link:hover,
+.link:active {
+  color: a.$text-color-white-1;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: a.$main-color-red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+// ACTIVE STATE
+.active.link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// WHEN ITS STICKY
+.dark-text:link,
+.dark-text:visited {
+  color: a.$grey;
+  font-size: b.$font-size-mid;
+}
+.dark-text:hover,
+.dark-text:active {
+  color: a.$grey-2;
+  font-size: b.$font-size-mid;
+}

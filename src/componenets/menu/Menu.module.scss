@@ -1,0 +1,94 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+
+.menu {
+  background-color: a.$main-color-black;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000000;
+  transition: all 0.5s ease-out;
+  transform: translateY(-100%);
+  opacity: 0;
+
+  &__active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__close-btn {
+    height: 5rem;
+    width: 5rem;
+    background-color: red;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+  }
+}
+
+// CLOSE BUTTON
+// COLORS
+$softorange: #f4a259;
+$tomatored: #f25c66;
+$mediumblu: #1e272d;
+
+.close-container {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: scale(0.8);
+}
+
+.leftright {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: a.$main-color-white;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.rightleft {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: a.$main-color-white;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in;
+}
+
+.close {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+.close {
+  margin: 60px 0 0 5px;
+  position: absolute;
+}
+
+.close-container:hover .leftright {
+  transform: rotate(-45deg);
+  background-color: a.$main-color-red;
+}
+.close-container:hover .rightleft {
+  transform: rotate(45deg);
+  background-color: a.$main-color-red;
+}
+.close-container:hover label {
+  opacity: 1;
+}

@@ -4,9 +4,9 @@ import Image from "next/image";
 import classes from "./HeroSocMediaIcons.module.scss";
 
 // SOCIAL MEDIA ICONS
-import viber from "../../../assets/soc-media-icons/viber.jpg";
-import telegram from "../../../assets/soc-media-icons/telegram.jpg";
-import whatsapp from "../../../assets/soc-media-icons/whatsapp.jpg";
+import viber from "../../assets/soc-media-icons/viber.jpg";
+import telegram from "../../assets/soc-media-icons/telegram.jpg";
+import whatsapp from "../../assets/soc-media-icons/whatsapp.jpg";
 
 const HeroSocMediaIcons = () => {
   return (

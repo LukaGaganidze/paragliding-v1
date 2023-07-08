@@ -1,8 +1,11 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
 // LANGUAGE
 // ARROW SVG
 
 .language-box-active {
-  background-color: #b3b3b3b5;
+  background-color: a.$grey-3;
 }
 
 .language-box {
@@ -23,44 +26,44 @@
       list-style: none;
       position: absolute;
       width: 100%;
-      border-bottom-left-radius: 0.5rem;
-      border-bottom-right-radius: 0.5rem;
-      background-color: #b3b3b3b5;
-      color: #fff;
+      border-bottom-left-radius: b.$border-radius-small;
+      border-bottom-right-radius: b.$border-radius-small;
+      background-color: a.$grey-3;
+      color: a.$main-color-white;
 
-      border-top: solid #fff 2px;
+      border-top: solid a.$main-color-white 2px;
     }
     & li {
       padding: 0.1rem 0;
     }
     & li:not(:last-child) {
-      border-bottom: solid #fff 1px;
+      border-bottom: solid a.$main-color-white 1px;
     }
   }
 
   &:hover {
-    background-color: #b3b3b3b5;
+    background-color: a.$text-color-white;
   }
 }
 
 .language {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: a.$main-color-white;
 }
 .dark-text {
-  color: #333333;
+  color: a.$grey;
 }
 
 .svg-box {
   display: flex;
 }
 .svg {
-  stroke: #fff;
+  stroke: a.$main-color-white;
   height: 3rem;
 }
 .dark-svg {
-  stroke: #333333;
+  stroke: a.$grey;
 }
 .language-lang {
   display: inline-block;

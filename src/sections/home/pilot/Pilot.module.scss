@@ -1,0 +1,95 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.pilot {
+  max-width: b.$container-large-1;
+  margin: 0 auto b.$margin-large-5 auto;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    column-gap: b.$margin-large;
+    row-gap: b.$margin-mid-1;
+
+    &__text-box {
+      font-size: b.$font-size-regular-plus;
+      letter-spacing: 1px;
+      font-weight: 200;
+
+      & p:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__link,
+    &__link:link,
+    &__link:visited {
+      color: a.$main-color-black;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.4s;
+      font-size: b.$font-size-mid;
+      font-weight: 300;
+      width: max-content;
+
+      & div {
+        height: 0.16rem;
+        width: 1.5rem;
+        background-color: a.$main-color-red;
+        transition: all 0.4s;
+      }
+      &:hover {
+        color: a.$main-color-red;
+      }
+      &:hover div {
+        width: 2.3rem;
+      }
+    }
+    &__heading {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.4fr 2fr;
+      gap: b.$margin-large;
+
+      &__name {
+        font-weight: 100;
+        font-size: b.$font-size-mid;
+        color: a.$text-color-white-1;
+
+        & span {
+          font-size: b.$font-size-large-1;
+          letter-spacing: 2px;
+          font-weight: 100;
+          color: a.$main-color-black;
+        }
+      }
+
+      &__pilot {
+        font-size: b.$font-size-large-2;
+        letter-spacing: 3px;
+        position: relative;
+
+        span {
+          position: absolute;
+          top: -12rem;
+          left: -5rem;
+          font-size: b.$font-size-x-large-3;
+          color: a.$background-letter-white;
+          z-index: -1;
+          font-style: italic;
+        }
+      }
+    }
+
+    // img s
+    &__img-box {
+      width: 100%;
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    // text
+  }
+}

@@ -1,0 +1,31 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+
+.book-flight {
+  &__pacages {
+    width: b.$container-large-1;
+    margin: 0 auto;
+    margin-top: b.$margin-large-3;
+    margin-bottom: b.$margin-large;
+
+    &__heading {
+      font-size: b.$font-size-large-3;
+      position: relative;
+      font-weight: 100;
+      margin-bottom: b.$margin-small-2;
+
+      & .background-text {
+        position: absolute;
+        top: -7rem;
+        left: -6rem;
+        z-index: -1;
+        color: rgba($color: a.$heading-color-d-white-2, $alpha: 1);
+        font-size: 15rem;
+      }
+    }
+  }
+
+  &__winter {
+    margin-bottom: b.$margin-large;
+  }
+}

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import classes from "./BuyMeACoffee.module.scss";
 
-import coffee from "../../../assets/soc-media-icons/coffee.jpg";
-import luffy from "../../../assets/svg/luffy.png";
+import coffee from "../../assets/soc-media-icons/coffee.jpg";
+import luffy from "../../assets/svg/luffy.png";
 
 const BuyMeACoffee = () => {
   return (

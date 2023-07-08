@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, createContext } from "react";
 
 import classes from "./TopNavigation.module.scss";
 
@@ -11,7 +11,6 @@ const TopNavigation = () => {
   // STICKY NAVBAR
   const navbar = useRef();
   const [isVisible, setIsVisible] = useState(true);
-
   // INTERSECTION OBSERVER
   useEffect(() => {
     // INTERSECTIONOBSERVER FUNCTION

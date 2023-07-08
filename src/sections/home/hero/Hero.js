@@ -8,8 +8,6 @@ import Link from "next/link";
 import { Lilita_One, Oswald } from "next/font/google";
 
 // COMPONENETS
-import HeroSocMediaIcons from "./HeroSocMediaIcons";
-import BuyMeACoffee from "./BuyMeACoffee";
 import BgVid from "./BgVid";
 
 const bagel = Lilita_One({ subsets: ["latin"], weight: ["400"] });
@@ -25,15 +23,10 @@ const Hero = () => {
     return () => clearTimeout(btnDelayTiemout);
   });
 
-  console.log(btnVisible);
   return (
     <div className={classes["hero"]}>
       {/* BACKGROUND VIDEO */}
       <BgVid />
-      {/* SOC MEDIA ICONS */}
-      <HeroSocMediaIcons />
-      {/* BUY ME A COFFE */}
-      <BuyMeACoffee />
 
       {/* CONTENT */}
       <h1 className={`${bagel.className} ${classes["hero__main-heading"]}`}>
