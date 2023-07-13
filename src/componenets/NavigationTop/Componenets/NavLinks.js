@@ -11,6 +11,16 @@ const NavLinks = ({ sticky }) => {
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
+          href="/"
+        >
+          Home
+        </Link>
+      </li>
+      <li className={classes["link-list"]}>
+        <Link
+          className={`${classes["link"]} ${
+            classes[!sticky ? "dark-text" : ""]
+          }`}
           href="/book"
         >
           Book Flight
@@ -31,7 +41,7 @@ const NavLinks = ({ sticky }) => {
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
-          href="/"
+          href="/pilot"
         >
           Pilot
         </Link>

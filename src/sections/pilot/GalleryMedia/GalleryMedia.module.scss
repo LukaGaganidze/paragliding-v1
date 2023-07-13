@@ -1,0 +1,15 @@
+@use "../../../scss/base" as b;
+
+.slider {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-bottom: b.$margin-large-5;
+
+  &__img-container {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

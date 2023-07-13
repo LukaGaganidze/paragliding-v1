@@ -49,6 +49,7 @@ const WinterFlights = ({ season, cardsData, booking }) => {
       if (seasonRef.current) seasonObserver.unobserve(seasonRef.current);
     };
   });
+
   return (
     <div
       ref={seasonRef}
@@ -78,7 +79,16 @@ const WinterFlights = ({ season, cardsData, booking }) => {
         )}
 
         <span className={classes["flight__heading__normal"]}>
-          Featured paragliding flight packages for the {season} season
+          Featured paragliding flight packages for the {season} season{" "}
+          {season === "Winter" ? (
+            <span className={classes["flight__heading__normal__date"]}>
+              December 10 to April 15
+            </span>
+          ) : (
+            <span className={classes["flight__heading__normal__date"]}>
+              April 16 to December 9{" "}
+            </span>
+          )}
         </span>
       </h2>
       <ul className={classes["flight__featured"]}>

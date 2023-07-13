@@ -30,6 +30,10 @@
       font-weight: 300;
       letter-spacing: 3px;
       padding-left: 1.1rem;
+
+      &__date {
+        color: a.$main-color-red;
+      }
     }
   }
   &__featured {

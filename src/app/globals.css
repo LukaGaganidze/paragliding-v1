@@ -38,3 +38,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
+
+/* slider */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #888888 !important;
+}

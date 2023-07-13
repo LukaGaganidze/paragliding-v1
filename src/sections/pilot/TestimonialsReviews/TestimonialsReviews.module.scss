@@ -1,0 +1,85 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.testimonials {
+  margin-bottom: b.$margin-large-3;
+
+  &__heading {
+    width: b.$container-large-1;
+    margin: 0 auto;
+
+    font-size: b.$font-size-large-3;
+    letter-spacing: 2px;
+    font-weight: 100;
+    display: flex;
+    gap: 5rem;
+    margin-bottom: b.$margin-mid-3;
+
+    &__testimonial,
+    &__rewiev {
+      position: relative;
+    }
+
+    &__letter {
+      position: absolute;
+      left: -5rem;
+      top: -100%;
+      font-size: 15rem;
+      z-index: -1;
+      color: rgba($color: a.$heading-color-d-white, $alpha: 0.6);
+    }
+  }
+}
+
+.content {
+  margin: 0 auto;
+  width: b.$container-large-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+
+  &__img-box {
+    transform: translateX(-5rem);
+    opacity: 0.1;
+    transition: all 0.8s;
+
+    &__active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.6rem;
+    }
+  }
+
+  &__text-box {
+    transform: translateX(5rem);
+    opacity: 0.1;
+    transition: all 0.8s;
+
+    &__active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    padding: 1rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: b.$font-size-mid-1;
+    letter-spacing: 1px;
+
+    &__testimonial {
+      height: 2rem;
+      width: 5rem;
+    }
+  }
+}
+
+.test-slider {
+  width: 55rem;
+  padding: 1.5rem;
+}

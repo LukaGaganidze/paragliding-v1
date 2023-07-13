@@ -1,4 +1,5 @@
 import "./globals.css";
+
 import { Oswald } from "next/font/google";
 
 import TopNavigation from "@/componenets/NavigationTop/TopNavigation";

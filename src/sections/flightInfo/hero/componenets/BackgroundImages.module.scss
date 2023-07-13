@@ -1,0 +1,19 @@
+.img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.effect {
+  animation: fade 7s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
