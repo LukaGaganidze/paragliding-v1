@@ -16,6 +16,7 @@ const NavLinks = ({ sticky }) => {
           Home
         </Link>
       </li>
+
       <li className={classes["link-list"]}>
         <Link
           className={`${classes["link"]} ${
@@ -26,6 +27,7 @@ const NavLinks = ({ sticky }) => {
           Book Flight
         </Link>
       </li>
+
       <li className={classes["link-box"]}>
         <Link
           className={`${classes["link"]} ${
@@ -36,6 +38,7 @@ const NavLinks = ({ sticky }) => {
           Flight Info
         </Link>
       </li>
+
       <li className={classes["link-box"]}>
         <Link
           className={`${classes["link"]} ${
@@ -46,16 +49,7 @@ const NavLinks = ({ sticky }) => {
           Pilot
         </Link>
       </li>
-      <li className={classes["link-box"]}>
-        <Link
-          className={`${classes["link"]} ${
-            classes[!sticky ? "dark-text" : ""]
-          }`}
-          href="/"
-        >
-          Gallery
-        </Link>
-      </li>
+
       <li className={classes["link-box"]}>
         <Link
           className={`${classes["link"]} ${

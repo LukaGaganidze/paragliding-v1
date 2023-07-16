@@ -1,0 +1,43 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
+
+.summer-sec {
+  padding-top: 8rem;
+
+  //  INTERSECTION OBSERVER FADE IN
+  &__heading {
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateY(7rem);
+  }
+
+  &__active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  & h2 {
+    font-size: b.$font-size-large-3;
+    text-align: center;
+    margin: 0 auto b.$margin-large auto;
+    letter-spacing: 3px;
+    font-weight: 100;
+    position: relative;
+    width: max-content;
+
+    & span {
+      position: absolute;
+      width: 90rem;
+      top: -80%;
+      left: -6rem;
+      z-index: -1;
+      font-size: 15rem;
+      background: -webkit-linear-gradient(
+        rgba($color: a.$summer-color-coral, $alpha: 0.4),
+        rgba($color: a.$summer-color-turquoise, $alpha: 0.4)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

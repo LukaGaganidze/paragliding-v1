@@ -1,0 +1,162 @@
+@use "../../../../../scss/abstracts" as a;
+@use "../../../../../scss/base" as b;
+
+.summer {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color: a.$summer-color-coral, $alpha: 0.7),
+    rgba($color: a.$summer-color-turquoise, $alpha: 0.7)
+  );
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 5rem;
+  color: a.$main-color-white;
+
+  & h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    & span:first-child {
+      font-size: b.$font-size-large-2;
+      letter-spacing: 3px;
+      font-weight: 100;
+    }
+    & span:last-child {
+      font-size: b.$font-size-mid-1;
+      letter-spacing: 2.7px;
+      font-weight: 100;
+    }
+  }
+
+  &__info {
+    width: 60rem;
+    margin: 0 auto;
+    &__description {
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: a.$main-color-red;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        border-bottom: solid a.$main-color-red 2px;
+        padding: 1rem 0;
+        letter-spacing: 1px;
+
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__action {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & a,
+    & a:link,
+    & a:visited {
+      color: a.$main-color-white;
+      transition: all 0.5s;
+    }
+
+    & a:first-child {
+      animation-name: fade-in-left;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: b.$font-size-mid-1;
+      padding: 0rem 1.5rem 0.5rem 1.5rem;
+      border: solid a.$main-color-white;
+      border-radius: 1rem;
+      background-color: rgba($color: a.$main-color-white, $alpha: 0.3);
+    }
+    & a:first-child:hover {
+      background-color: a.$main-color-white;
+      color: a.$main-color-red;
+    }
+
+    // MORE INFO LINK
+    &__more-info {
+      animation-name: fade-in-right;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+    }
+    &__more-info,
+    &__more-info:link,
+    &__more-info:visited {
+      cursor: pointer;
+
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      & span:first-child {
+        display: inline-block;
+        width: 2rem;
+        height: 1px;
+        background-color: a.$main-color-white;
+        transition: all 0.4s;
+      }
+      & span:last-child {
+        display: inline-block;
+        font-size: b.$font-size-mid;
+        padding: 0 0 0.7rem 0;
+        color: a.$main-color-white;
+      }
+    }
+
+    &__more-info:hover,
+    &__more-info:active {
+      & span:first-child {
+        width: 3rem;
+        background-color: a.$main-color-red;
+      }
+      & span:last-child {
+        color: a.$main-color-red;
+      }
+    }
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}

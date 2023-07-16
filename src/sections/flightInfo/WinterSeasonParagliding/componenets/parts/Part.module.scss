@@ -1,0 +1,111 @@
+@use "../../../../../scss/abstracts" as a;
+@use "../../../../../scss/base" as b;
+
+// SUMMER
+.similar {
+  width: b.$container-large-1;
+  margin: 0 auto;
+  display: grid;
+  column-gap: b.$margin-large;
+  align-items: center;
+  transition: all 0.5s;
+
+  & p {
+    font-size: b.$font-size-mid;
+    letter-spacing: 1px;
+    & span {
+      color: a.$main-color-red;
+      letter-spacing: 1px;
+      font-weight: 800 !important;
+    }
+  }
+
+  &__heading {
+    font-size: b.$font-size-mid-3;
+    font-weight: 800 !important;
+    background: -webkit-linear-gradient(
+      a.$winter-color-dark,
+      a.$winter-color-light
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: b.$margin-large-1;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.6rem;
+  }
+}
+
+.part {
+  grid-template-columns: 1fr 2.5fr;
+  position: relative;
+  opacity: 0;
+  transform: translateX(5rem);
+
+  &:after {
+    content: "";
+    height: 1rem;
+    width: 90%;
+    background: linear-gradient(to left, transparent, a.$winter-color-light);
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+.part-reverse {
+  grid-template-columns: 2.5fr 1fr;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-5rem);
+
+  &:after {
+    content: "";
+    height: 1rem;
+    width: 90%;
+    background: linear-gradient(to right, transparent, a.$winter-color-light);
+    position: absolute;
+    bottom: -2rem;
+    right: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    // z-index: -1;
+  }
+}
+
+.booking-btn,
+.booking-btn:link,
+.booking-btn:visited {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  width: max-content;
+  background: linear-gradient(
+    rgba($color: a.$summer-color-coral, $alpha: 0.8),
+    rgba($color: a.$summer-color-turquoise, $alpha: 0.8)
+  );
+  color: a.$main-color-white;
+  font-size: b.$font-size-mid-1;
+  padding: 0 1.5rem 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-top: b.$margin-mid;
+  transition: all 0.5s;
+}
+.booking-btn:hover,
+.booking-btn:active {
+  transform: translateY(-0.4rem);
+  box-shadow: 0px 5px 15px 1px
+    rgba($color: a.$summer-color-turquoise, $alpha: 0.3);
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}

@@ -1,0 +1,75 @@
+.introduciton {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.winter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.5s;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    transform: translateX(-30%);
+    transition: all 0.4s;
+    z-index: -1;
+  }
+
+  &__active {
+    width: 80%;
+  }
+
+  &__inActive {
+    width: 20%;
+  }
+  &__inActive .winter__img {
+    transform: translateX(-40%);
+  }
+
+  &__not-intersecting {
+    width: 50%;
+  }
+}
+
+.summer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transition: all 0.5s;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    z-index: -1;
+    transform: translateX(25.5%);
+    transition: all 0.4s;
+  }
+
+  &__active {
+    width: 80%;
+  }
+
+  &__inActive {
+    width: 20%;
+  }
+  &__inActive .summer__img {
+    transform: translateX(34%);
+  }
+  &__not-intersecting {
+    width: 50%;
+  }
+}
