@@ -86,7 +86,11 @@ const GalleryMedia = () => {
         {SLIDER_DATA.map((item) => (
           <SwiperSlide key={item.id}>
             <div className={classes["slider__img-container"]}>
-              <Image src={item.img} alt="Beatiful paragliding image" />
+              <Image
+                quality={50}
+                src={item.img}
+                alt="Beatiful paragliding image"
+              />
             </div>
           </SwiperSlide>
         ))}
