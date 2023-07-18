@@ -1,0 +1,19 @@
+@use "../../../../../scss/abstracts" as a;
+@use "../../../../../scss/base" as b;
+
+.destination-container {
+  position: relative;
+  margin-top: b.$margin-large;
+  & h2 {
+    text-align: center;
+    font-size: b.$font-size-large-1;
+    letter-spacing: 3px;
+    margin-bottom: b.$margin-small-2;
+  }
+}
+
+.destination {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}

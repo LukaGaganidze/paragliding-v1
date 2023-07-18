@@ -1,0 +1,27 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+
+// CONTANCT
+.icons-box {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: b.$margin-small-1;
+
+  &__link {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: a.$main-color-red;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -9,33 +9,3 @@
     border-left: solid a.$main-color-red;
   }
 }
-
-// SOCIAL MEDIA ICONS
-.soc-media__icons {
-  display: flex;
-  gap: 0.5rem;
-
-  &__box {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 5rem;
-    height: 5rem;
-    display: inline-block;
-    transition: all 0.4s;
-
-    &:hover {
-      background-color: a.$main-color-red;
-    }
-
-    &__fb {
-      & img {
-        transform: translateY(-0.5rem) scale(0.95);
-      }
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}

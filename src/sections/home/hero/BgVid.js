@@ -31,6 +31,13 @@ const BackgroundVideo = () => {
           }`}
           src={backupImage}
           alt="Winter paraglifing image"
+          placeholder="blur"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       </div>
       {/* BACKGROUND VIDEO */}

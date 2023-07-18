@@ -1,0 +1,46 @@
+@use "../../../../../scss/abstracts" as a;
+@use "../../../../../scss/base" as b;
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: solid rgba($color: a.$main-color-white, $alpha: 0.3);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: rgba($color: a.$main-color-white, $alpha: 0.3);
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: a.$main-color-white;
+  }
+
+  span {
+    font-size: b.$font-size-mid-1;
+  }
+
+  &__name {
+    span {
+      color: a.$main-color-white;
+      letter-spacing: 2px;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+.location__icon {
+  color: a.$main-color-red;
+  height: 4rem;
+  width: 4rem;
+  transform: translateY(0.5rem);
+}
+
+.destination__icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.item:hover .item__name span {
+  color: a.$main-color-red;
+}

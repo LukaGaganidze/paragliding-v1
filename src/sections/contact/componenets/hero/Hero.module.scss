@@ -1,0 +1,73 @@
+@use "../../../../scss/abstracts" as a;
+@use "../../../../scss/base" as b;
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0 10%,
+    rgba(0, 0, 0, 0.35) 40% 100%
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: a.$main-color-white;
+
+  // HEADING
+  &__heading {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: b.$margin-mid-3;
+
+    h2 {
+      font-size: b.$font-size-large-3;
+      margin-bottom: b.$margin-small-3;
+    }
+
+    &__sub {
+      font-size: b.$font-size-large;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 3px;
+
+      span:first-child {
+        font-weight: 100;
+      }
+
+      span:last-child {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+// CONTACTS AND ICONS
+.contacts {
+  position: relative;
+  display: flex;
+  width: b.$container-mid;
+  justify-content: space-between;
+
+  &__bridge {
+    width: 0.1rem;
+    background-color: a.$main-color-white;
+  }
+
+  &__socMediaIcons {
+    transform: scale(1.3);
+    margin-top: b.$margin-small-1;
+  }
+
+  &__contactsIconsComponenet {
+    transform: scale(1.3);
+    display: flex;
+    align-items: center;
+  }
+}
+
+// DESTINATION HEADING

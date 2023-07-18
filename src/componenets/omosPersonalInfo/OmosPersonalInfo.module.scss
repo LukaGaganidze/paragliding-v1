@@ -1,0 +1,34 @@
+@use "../../scss/abstracts" as a;
+@use "../../scss/base" as b;
+
+.info-box {
+  list-style: none;
+  margin-top: b.$margin-small-2;
+
+  & li:not(:last-child) {
+    margin-bottom: b.$margin-small-1;
+  }
+  &__info,
+  &__info:link,
+  &__info:visited {
+    color: a.$main-color-white;
+    transition: all 0.4s;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: max-content;
+  }
+  &__info:hover,
+  &__info:active {
+    color: a.$main-color-red;
+    transform: scale(1.05);
+  }
+  &__svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  // exception
+  &__place {
+    font-size: b.$font-size-small-1;
+  }
+}

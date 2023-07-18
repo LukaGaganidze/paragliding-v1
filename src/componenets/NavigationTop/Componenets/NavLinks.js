@@ -55,7 +55,7 @@ const NavLinks = ({ sticky }) => {
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
-          href="/"
+          href="/contact"
         >
           Contact
         </Link>
