@@ -8,11 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoute } from "@fortawesome/free-solid-svg-icons";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
-const DestinationItem = ({ city }) => {
+const DestinationItem = ({ city, id }) => {
   const [mouseEntered, setMouseEntered] = useState(false);
 
   return (
     <a
+      href={`#${id}`}
       onMouseEnter={() => setMouseEntered(true)}
       onMouseLeave={() => setMouseEntered(false)}
       className={classes["item"]}

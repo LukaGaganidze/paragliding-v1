@@ -1,71 +1,27 @@
 @use "../../../scss/abstracts" as a;
 @use "../../../scss/base" as b;
 
-// LANGUAGE
-// ARROW SVG
-
-.language-box-active {
-  background-color: a.$grey-3;
-}
-
-.language-box {
-  cursor: pointer;
-  border-radius: 0.5rem;
-  transition: all 0.4s;
-  padding: 0.5rem 1rem;
-  position: relative;
-
-  // OPTIONA LANG
-  &--optional {
-    & ul {
-      left: 0;
-      bottom: -5rem;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      list-style: none;
-      position: absolute;
-      width: 100%;
-      border-bottom-left-radius: b.$border-radius-small;
-      border-bottom-right-radius: b.$border-radius-small;
-      background-color: a.$grey-3;
-      color: a.$main-color-white;
-
-      border-top: solid a.$main-color-white 2px;
-    }
-    & li {
-      padding: 0.1rem 0;
-    }
-    & li:not(:last-child) {
-      border-bottom: solid a.$main-color-white 1px;
-    }
-  }
-
-  &:hover {
-    background-color: a.$text-color-white;
+.menu-transparent {
+  &__select {
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: a.$main-color-black;
+    background-color: rgba($color: a.$main-color-white, $alpha: 1);
   }
 }
 
-.language {
-  display: flex;
-  align-items: center;
-  color: a.$main-color-white;
-}
-.dark-text {
-  color: a.$grey;
-}
-
-.svg-box {
-  display: flex;
-}
-.svg {
-  stroke: a.$main-color-white;
-  height: 3rem;
-}
-.dark-svg {
-  stroke: a.$grey;
-}
-.language-lang {
-  display: inline-block;
-  padding: 0 1rem;
+.menu-white {
+  &__select {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    border: solid a.$main-color-black 2px;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
 }

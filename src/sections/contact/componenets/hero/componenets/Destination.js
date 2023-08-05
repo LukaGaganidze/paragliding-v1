@@ -8,15 +8,19 @@ const oswald = Oswald({ subsets: ["latin"], weight: ["400"] });
 const TRAVEL_DATA = [
   {
     city: "BATUMI",
+    id: "batumi",
   },
   {
     city: "TBILISI",
+    id: "tbilisi",
   },
   {
     city: "KUTAISI",
+    id: "kutaisi",
   },
   {
     city: "KAZBEGI",
+    id: "kazbegi",
   },
 ];
 
@@ -28,7 +32,7 @@ const Destination = () => {
       </h2>
       <div className={classes["destination"]}>
         {TRAVEL_DATA.map((item) => (
-          <DestinationItem city={item.city} />
+          <DestinationItem key={item.id} id={"travel-guide"} city={item.city} />
         ))}
       </div>
     </div>
@@ -36,5 +40,3 @@ const Destination = () => {
 };
 
 export default Destination;
-
-// onMouseEnter={} onMouseLeave={}

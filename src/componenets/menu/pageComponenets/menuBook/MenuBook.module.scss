@@ -1,0 +1,143 @@
+@use "../../../../scss/abstracts" as a;
+@use "../../../../scss/base" as b;
+
+.menu-book {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  height: 100%;
+  padding-bottom: 12rem;
+
+  &__img1-box,
+  &__img1-box:link,
+  &__img1-box:visited {
+    overflow: hidden;
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+
+    div {
+      background-image: url("../../../../assets/desktopMenu/menu/booking/info.jpg");
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: brightness(70%);
+      transition: all 0.4s;
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      color: a.$main-color-white;
+      font-size: b.$font-size-large-3;
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      transform: translate(0, -50%);
+      letter-spacing: 3px;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      & div {
+        filter: brightness(100%);
+        transform: scale(1.05);
+      }
+
+      & span {
+        color: a.$main-color-red;
+      }
+    }
+  }
+
+  &__img2-box,
+  &__img2-box:link,
+  &__img2-box:visited {
+    overflow: hidden;
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    div {
+      background-image: url("../../../../assets/desktopMenu/menu/booking/summer.jpg");
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: brightness(70%);
+      transition: all 0.4s;
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      color: a.$main-color-white;
+      font-size: b.$font-size-large-3;
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      transform: translate(0, -50%);
+      letter-spacing: 3px;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      & div {
+        filter: brightness(100%);
+        transform: scale(1.05);
+      }
+
+      & span {
+        color: a.$main-color-red;
+      }
+    }
+  }
+
+  &__img3-box,
+  &__img3-box:link,
+  &__img3-box:visited {
+    overflow: hidden;
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    div {
+      background-image: url("../../../../assets/desktopMenu/menu/booking/winter.jpg");
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: brightness(70%);
+      transition: all 0.4s;
+    }
+
+    span {
+      width: 100%;
+      text-align: center;
+      color: a.$main-color-white;
+      font-size: b.$font-size-large-3;
+      position: absolute;
+      top: 50%;
+      z-index: 100;
+      transform: translate(0, -50%);
+      letter-spacing: 3px;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      & div {
+        filter: brightness(100%);
+        transform: scale(1.05);
+      }
+
+      & span {
+        color: a.$main-color-red;
+      }
+    }
+  }
+}

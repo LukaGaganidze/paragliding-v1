@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import classes from "./HeroSocMediaIcons.module.scss";
 
@@ -14,7 +15,9 @@ const HeroSocMediaIcons = () => {
       {/* SOC MEDIA ICONS */}
       <div className={classes["icons"]}>
         {/* VIBER */}
-        <div
+        <Link
+          href="https://viber.click/995599460052"
+          target="_blank"
           className={`${classes["icons--individual"]} ${classes["icons--individual--whatsapp"]}`}
         >
           <Image
@@ -29,7 +32,7 @@ const HeroSocMediaIcons = () => {
           >
             <span>Viber</span>
           </div>
-        </div>
+        </Link>
 
         {/* TELEGRAM */}
         <div
@@ -50,7 +53,9 @@ const HeroSocMediaIcons = () => {
         </div>
 
         {/* WHATSAPP*/}
-        <div
+        <Link
+          href="https://wa.link/eiteyy"
+          target="_blank"
           className={`${classes["icons--individual"]} ${classes["icons--individual--whatsapp"]}`}
         >
           <Image
@@ -65,7 +70,7 @@ const HeroSocMediaIcons = () => {
           >
             <span>WhatsApp</span>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

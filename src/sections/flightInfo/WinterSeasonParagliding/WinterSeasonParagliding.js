@@ -6,6 +6,8 @@ import classes from "./WinterSeasonParagliding.module.scss";
 import Part from "./componenets/parts/Part";
 import Slider from "./componenets/slider/Slider";
 
+import WinterFlights from "@/componenets/winterSummerFlights/Flights";
+
 // MAIN IMAGES
 import mainImg1 from "../../../assets/pages/flightInfo/winterFlights/main/pic1.jpg";
 import mainImg2 from "../../../assets/pages/flightInfo/winterFlights/main/pic2.jpg";
@@ -15,7 +17,7 @@ import mainImg5 from "../../../assets/pages/flightInfo/winterFlights/main/pic5.j
 import mainImg6 from "../../../assets/pages/flightInfo/winterFlights/main/pic6.jpg";
 import mainImg7 from "../../../assets/pages/flightInfo/winterFlights/main/pic7.jpg";
 
-import { Bad_Script, Pacifico } from "next/font/google";
+import { Pacifico } from "next/font/google";
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 // PARTS DATA
@@ -152,6 +154,44 @@ const PARTS_DATA = [
   },
 ];
 
+// FLIGHT DATA
+const WINTER_DATA = [
+  {
+    img: winterOne,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 1,
+    price: "100$",
+  },
+  {
+    img: winterTwo,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 2,
+    price: "100$",
+  },
+  {
+    img: winterThree,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 3,
+    price: "100$",
+  },
+];
+
+// WINTER
+import winterOne from "../../../assets/paragliding-winter/winter-1.jpg";
+import winterTwo from "../../../assets/paragliding-winter/winter-2.jpg";
+import winterThree from "../../../assets/paragliding-winter/winter-3.jpg";
+
+// SUMMER
+import summerOne from "../../../assets/paragliding-summer/paragliding-summer-1.jpg";
+import summerTwo from "../../../assets/paragliding-summer/paragliding-summer-2.jpg";
+import summerThree from "../../../assets/paragliding-summer/paragliding-summer-3.jpg";
+
 const WinterSeasonParagliding = () => {
   // HEADINF
   const headingRef = useRef();
@@ -206,6 +246,7 @@ const WinterSeasonParagliding = () => {
 
       {PARTS_DATA.map((part) => (
         <Part
+          key={part.id}
           image={part.image}
           text={part.text}
           imgLeftSide={part.imgLeftSide}
@@ -213,6 +254,10 @@ const WinterSeasonParagliding = () => {
           button={part.button}
         />
       ))}
+
+      <div className={classes["winter-sec__winter"]}>
+        <WinterFlights cardsData={WINTER_DATA} booking={true} season="Winter" />
+      </div>
 
       <Slider />
     </section>

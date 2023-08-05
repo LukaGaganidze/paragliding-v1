@@ -16,7 +16,7 @@
     transform: translateY(0);
   }
 
-  & h2 {
+  &__heading {
     font-size: b.$font-size-large-3;
     text-align: center;
     margin: 0 auto b.$margin-large auto;
@@ -40,4 +40,8 @@
       -webkit-text-fill-color: transparent;
     }
   }
+}
+
+.book-flight__summer {
+  margin-bottom: b.$margin-large-2;
 }

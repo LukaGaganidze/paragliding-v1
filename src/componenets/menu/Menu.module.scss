@@ -7,31 +7,30 @@
   height: 100vh;
   width: 100%;
   z-index: 1000000;
-  transition: all 0.5s ease-out;
+  transition: transform 0.5s ease-out;
   transform: translateY(-100%);
-  opacity: 0;
+  overflow: hidden;
 
   &__active {
+    display: block;
     transform: translateY(0);
+    visibility: visible;
     opacity: 1;
   }
-
+  &__inactive {
+    visibility: hidden;
+    opacity: 0;
+  }
   &__close-btn {
     height: 5rem;
     width: 5rem;
-    background-color: red;
+    background-color: a.$main-color-black;
     position: absolute;
     top: 3rem;
     right: 3rem;
     cursor: pointer;
   }
 }
-
-// CLOSE BUTTON
-// COLORS
-$softorange: #f4a259;
-$tomatored: #f25c66;
-$mediumblu: #1e272d;
 
 .close-container {
   position: absolute;
@@ -91,4 +90,37 @@ $mediumblu: #1e272d;
 }
 .close-container:hover label {
   opacity: 1;
+}
+
+// NAVIGATION
+.navigation-container {
+  padding-bottom: 2rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  background-color: #0002;
+}
+
+.main-content {
+  width: b.$container-large-1;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+
+  &__item {
+    animation-name: fade-from-top;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes fade-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

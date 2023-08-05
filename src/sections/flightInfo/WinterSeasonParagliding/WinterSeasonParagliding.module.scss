@@ -2,6 +2,7 @@
 @use "../../../scss/base" as b;
 
 .winter-sec {
+  padding-top: 12rem;
   //  INTERSECTION OBSERVER FADE IN
   &__heading {
     transition: all 0.5s;
@@ -14,8 +15,7 @@
     transform: translateY(0);
   }
 
-  padding-top: 12rem;
-  & h2 {
+  &__heading {
     font-size: b.$font-size-large-3;
     text-align: center;
     margin: 0 auto b.$margin-large auto;
@@ -37,5 +37,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+
+  &__winter {
+    margin-bottom: b.$margin-large-2;
   }
 }

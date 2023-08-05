@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import classes from "./BuyMeACoffee.module.scss";
 
@@ -8,13 +9,17 @@ import luffy from "../../assets/svg/luffy.png";
 const BuyMeACoffee = () => {
   return (
     <>
-      <div className={classes["icon"]}>
+      <Link
+        target="_blank"
+        href="https://www.buymeacoffee.com/LukaWebDev"
+        className={classes["icon"]}
+      >
         <Image
           className={classes["icon--image"]}
           src={coffee}
           alt="Donation, Buy Me A Coffee logo"
         />
-      </div>
+      </Link>
 
       <div className={classes["content"]}>
         {/* HOVER CONTENT */}

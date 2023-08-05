@@ -4,8 +4,12 @@ import React, { useEffect, useRef, useState } from "react";
 
 import classes from "./SummerSeasonParagliding.module.scss";
 
-import Image from "next/image";
-import Link from "next/link";
+import SummerFlights from "@/componenets/winterSummerFlights/Flights";
+
+// SUMMER
+import summerOne from "../../../assets/paragliding-summer/paragliding-summer-1.jpg";
+import summerTwo from "../../../assets/paragliding-summer/paragliding-summer-2.jpg";
+import summerThree from "../../../assets/paragliding-summer/paragliding-summer-3.jpg";
 
 // MAIN IMAGES
 import mainImg1 from "../../../assets/pages/flightInfo/SummerFlights/main/pic1.jpg";
@@ -19,8 +23,7 @@ import mainImg7 from "../../../assets/pages/flightInfo/SummerFlights/main/pic7.j
 import Part from "./componenets/parts/Part";
 import Slider from "./componenets/slider/Slider";
 
-import { Bad_Script, Pacifico } from "next/font/google";
-const caveat = Bad_Script({ subsets: ["latin"], weight: ["400"] });
+import { Pacifico } from "next/font/google";
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 const SummerSeasonParagliding = () => {
@@ -192,6 +195,33 @@ const SummerSeasonParagliding = () => {
     },
   ];
 
+  const SUMMER_DATA = [
+    {
+      img: summerOne,
+      start: "3006",
+      airtime: "5-10",
+      landing: "2200",
+      id: 1,
+      price: "100$",
+    },
+    {
+      img: summerTwo,
+      start: "3006",
+      airtime: "5-10",
+      landing: "2200",
+      id: 2,
+      price: "100$",
+    },
+    {
+      img: summerThree,
+      start: "3006",
+      airtime: "5-10",
+      landing: "2200",
+      id: 3,
+      price: "100$",
+    },
+  ];
+
   return (
     <section id="summer-season" className={classes["summer-sec"]}>
       <h2
@@ -214,6 +244,10 @@ const SummerSeasonParagliding = () => {
           button={item.button}
         />
       ))}
+
+      <div className={classes["book-flight__summer"]}>
+        <SummerFlights cardsData={SUMMER_DATA} booking={true} season="Summer" />
+      </div>
 
       <Slider />
     </section>

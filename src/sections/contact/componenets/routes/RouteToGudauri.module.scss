@@ -1,0 +1,28 @@
+@use "../../../../scss/abstracts" as a;
+@use "../../../../scss/base" as b;
+
+.to-gudauri-sec {
+  padding-top: b.$margin-large-5;
+  margin-bottom: b.$margin-large-3;
+
+  &__heading {
+    letter-spacing: 3px;
+    font-size: b.$font-size-large-3;
+    margin: 0 auto;
+    width: b.$container-large-1;
+    position: relative;
+    width: max-content;
+    margin-bottom: b.$margin-mid-3;
+
+    &__sub {
+      width: max-content;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -12rem;
+      position: absolute;
+      z-index: -1;
+      color: rgba($color: a.$heading-color-d-white-2, $alpha: 1);
+      font-size: 18rem;
+    }
+  }
+}
