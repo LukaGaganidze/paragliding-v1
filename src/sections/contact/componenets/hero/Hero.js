@@ -8,7 +8,7 @@ import BackgroundVideo from "./backgroundVid/BackgroundVid";
 import Destination from "./componenets/Destination";
 
 import OmosPersonalInfo from "@/componenets/omosPersonalInfo/OmosPersonalInfo";
-import ContactsIconsComponenet from "@/componenets/contactsIconsComponenet/contactsIconsComponenet";
+import ContactsIconsComponenet from "../../../../componenets/contactsIconsComponenet/ContactsIconsComponenet";
 
 import { Lilita_One, Oswald } from "next/font/google";
 const bagel = Lilita_One({ subsets: ["latin"], weight: ["400"] });

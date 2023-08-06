@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactsIconsComponenet from "@/componenets/contactsIconsComponenet/contactsIconsComponenet";
+import ContactsIconsComponenet from "../../../componenets/contactsIconsComponenet/ContactsIconsComponenet";
 import OmosPersonalInfo from "@/componenets/omosPersonalInfo/OmosPersonalInfo";
 
 import classes from "./Contacts.module.scss";
