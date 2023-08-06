@@ -5,7 +5,6 @@ import Link from "next/link";
 import classes from "./Guide.module.scss";
 
 // STEPS IMAGES
-
 import step1 from "../../../assets/pages/bookFlight/steps-images/step-1.jpg";
 import step2 from "../../../assets/pages/bookFlight/steps-images/step-2.jpg";
 import step3 from "../../../assets/pages/bookFlight/steps-images/step-3.jpg";
