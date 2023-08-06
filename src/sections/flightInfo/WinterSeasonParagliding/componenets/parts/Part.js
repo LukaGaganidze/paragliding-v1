@@ -6,7 +6,7 @@ import classes from "./Part.module.scss";
 
 import Image from "next/image";
 
-import { Bad_Script, Pacifico } from "next/font/google";
+import { Bad_Script } from "next/font/google";
 const caveat = Bad_Script({ subsets: ["latin"], weight: ["400"] });
 
 const Part = ({ image, text, imgLeftSide, heading, button }) => {

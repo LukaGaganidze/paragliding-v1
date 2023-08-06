@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import { Bad_Script, Pacifico } from "next/font/google";
+import { Pacifico } from "next/font/google";
 
 import classes from "./RouteToGudauri.module.scss";
 

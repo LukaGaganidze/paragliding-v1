@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Languages.module.scss";
-import { useState } from "react";
 
 const Languages = ({ sticky }) => {
   // SWITCH LANGUAGES
