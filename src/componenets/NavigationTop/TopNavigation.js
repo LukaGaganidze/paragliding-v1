@@ -44,7 +44,7 @@ const TopNavigation = () => {
         navbarObserver.unobserve(navbar.current);
       }
     };
-  });
+  }, []);
 
   return (
     <div ref={navbar} className={classes["navbar-container"]}>

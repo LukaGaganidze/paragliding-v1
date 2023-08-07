@@ -1,5 +1,4 @@
 import classes from "./Footer.module.scss";
-import Map from "./map/Map";
 import Menu from "./menu/Menu";
 import BookFlight from "./bookFlight/BookFlight";
 import SocMedia from "./socMedia/SocMedia";
@@ -13,7 +12,6 @@ const Footer = () => {
         <Menu />
         <SocMedia />
         <Contacts />
-        <Map />
       </div>
     </div>
   );
