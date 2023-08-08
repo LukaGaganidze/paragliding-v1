@@ -2,6 +2,10 @@ import React from "react";
 
 import classes from "./FeaturedFlightCardWinter.module.scss";
 import Image from "next/image";
+import Link from "next/link";
+
+// href="https://wa.link/eiteyy"
+// target="_blank"
 
 const FeaturedFlightCardWinter = ({ img, start, airtime, landing }) => {
   return (
@@ -44,14 +48,18 @@ const FeaturedFlightCardWinter = ({ img, start, airtime, landing }) => {
               <p className={classes["card__price-value"]}>$297</p>
             </div>
             <div className={classes["book-now-box"]}>
-              <a href="#popup" className={classes["book-now"]}>
+              <Link
+                href="https://wa.link/eiteyy"
+                target="_blank"
+                className={classes["book-now"]}
+              >
                 Book Flight
-              </a>
+              </Link>
             </div>
             <div>
-              <a href="#popup" className={classes["more-info"]}>
+              <Link href="/info#winter-season" className={classes["more-info"]}>
                 More info
-              </a>
+              </Link>
             </div>
           </div>
         </div>

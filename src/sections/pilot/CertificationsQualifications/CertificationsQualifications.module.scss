@@ -2,6 +2,7 @@
 @use "../../../scss/base" as b;
 
 .certification {
+  padding-top: b.$margin-large-5;
   margin-bottom: b.$margin-large-3;
   &__heading {
     width: b.$container-large-1;

@@ -41,7 +41,9 @@ const WinterSeason = () => {
 
       {/* ACTION */}
       <div className={classes["winter__action"]}>
-        <Link href="#">Book Flight</Link>
+        <Link href="https://wa.link/eiteyy" target="_blank">
+          Book Flight
+        </Link>
         <a
           className={classes["winter__action__more-info"]}
           href={"#winter-season"}

@@ -69,7 +69,7 @@ const WINTER_DATA = [
 // SUMMER DATA
 const FeaturedFlight = () => {
   return (
-    <section className={classes["featured-flights"]}>
+    <section id="featured" className={classes["featured-flights"]}>
       <div className={classes["featured-flights__heading"]}>
         <h2 className={classes["featured-flights__heading__winter"]}>
           <a href="#winter">Winter Flights</a>

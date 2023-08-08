@@ -40,7 +40,8 @@ const Hero = () => {
         {btnVisible && (
           <Link
             className={`${oswald.className}  ${classes["hero__booking-btn"]}`}
-            href="/"
+            href="https://wa.link/eiteyy"
+            target="_blank"
           >
             Book Your Flight
           </Link>

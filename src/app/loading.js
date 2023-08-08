@@ -1,5 +1,7 @@
-const LoadingConetent = () => {
-  return <h2>Loading..</h2>;
+import React from "react";
+
+const loading = () => {
+  return;
 };
 
-export default LoadingConetent;
+export default loading;

@@ -9,19 +9,17 @@ const Menu = () => {
       <h2>Menu</h2>
       <ul>
         <li>
-          <Link href="#">Book Flight</Link>
+          <Link href="/book">Book Flight</Link>
         </li>
         <li>
-          <Link href="#">Flight Info</Link>
+          <Link href="/info">Flight Info</Link>
         </li>
         <li>
-          <Link href="#">Pilot</Link>
+          <Link href="/pilot">Pilot</Link>
         </li>
+
         <li>
-          <Link href="#">Gallery</Link>
-        </li>
-        <li>
-          <Link href="#">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </div>

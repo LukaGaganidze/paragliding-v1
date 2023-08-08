@@ -195,7 +195,7 @@ const TestimonialsReviews = () => {
   });
 
   return (
-    <section className={classes["testimonials"]}>
+    <section id="testimonials" className={classes["testimonials"]}>
       {/* heading */}
       <h2 className={classes["testimonials__heading"]}>
         <span className={classes["testimonials__heading__testimonial"]}>

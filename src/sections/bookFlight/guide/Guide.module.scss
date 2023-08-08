@@ -3,7 +3,8 @@
 
 .guide-sec {
   width: b.$container-large-1;
-  margin: b.$margin-large-5 auto 0 auto;
+  margin: 0 auto 0 auto;
+  padding-top: b.$margin-large-6;
 
   & h2 {
     font-size: b.$font-size-large-3;

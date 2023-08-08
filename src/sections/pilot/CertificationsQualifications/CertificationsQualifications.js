@@ -50,7 +50,7 @@ const CertificationsQualifications = () => {
   });
 
   return (
-    <section className={classes["certification"]}>
+    <section id="certification" className={classes["certification"]}>
       {/* HEADING */}
       <h2 className={classes["certification__heading"]}>
         <span className={classes["certification__heading__certifications"]}>

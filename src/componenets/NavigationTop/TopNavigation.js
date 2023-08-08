@@ -6,7 +6,7 @@ import classes from "./TopNavigation.module.scss";
 
 import Burger from "./Componenets/Burger";
 import NavLinks from "./Componenets/NavLinks";
-import Languages from "./Componenets/Languages";
+// import Languages from "./Componenets/Languages";
 
 const TopNavigation = () => {
   // STICKY NAVBAR
@@ -62,7 +62,7 @@ const TopNavigation = () => {
         </div>
 
         {/* LANGUAGE */}
-        <Languages sticky={isVisible} />
+        {/* <Languages sticky={isVisible} /> */}
       </nav>
     </div>
   );

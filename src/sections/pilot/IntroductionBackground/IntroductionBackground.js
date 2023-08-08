@@ -23,7 +23,9 @@ const IntroductionBackground = () => {
           </span>
         </h2>
 
-        <Link href={"#"}>Book Flight</Link>
+        <Link href="https://wa.link/eiteyy" target="_blank">
+          Book Flight
+        </Link>
       </div>
 
       {/* RIGHT SIDE */}

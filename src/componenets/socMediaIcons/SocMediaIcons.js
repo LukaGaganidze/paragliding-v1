@@ -12,17 +12,26 @@ const SocMediaIcons = () => {
   return (
     <div className={classes["soc-media__icons"]}>
       <Link
-        href="#"
+        href="https://www.facebook.com/obarabadze"
+        target="_blank"
         className={`${classes["soc-media__icons__box"]} ${classes["soc-media__icons__box__fb"]}`}
       >
         <Image src={facebook} alt="facebook logo" />
       </Link>
 
-      <Link href="#" className={classes["soc-media__icons__box"]}>
+      <Link
+        href="https://www.instagram.com/obarabadze/"
+        target="_blank"
+        className={classes["soc-media__icons__box"]}
+      >
         <Image src={instagram} alt="instagram logo" />
       </Link>
 
-      <Link href="#" className={classes["soc-media__icons__box"]}>
+      <Link
+        href="https://www.youtube.com/@omobarabadze547"
+        target="_blank"
+        className={classes["soc-media__icons__box"]}
+      >
         <Image src={youtube} alt="youtube logo" />
       </Link>
     </div>

@@ -73,7 +73,11 @@ const Part = ({ image, text, imgLeftSide, heading, button }) => {
             <p>{text}</p>
 
             {button && (
-              <Link className={classes["booking-btn"]} href="#">
+              <Link
+                className={classes["booking-btn"]}
+                href="https://wa.link/eiteyy"
+                target="_blank"
+              >
                 Book Flight
               </Link>
             )}

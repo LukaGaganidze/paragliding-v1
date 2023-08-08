@@ -2,7 +2,7 @@
 @use "../../../scss/base" as b;
 
 .summer-sec {
-  padding-top: 8rem;
+  padding-top: b.$margin-large-5;
 
   //  INTERSECTION OBSERVER FADE IN
   &__heading {

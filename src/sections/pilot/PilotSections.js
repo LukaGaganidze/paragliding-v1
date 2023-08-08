@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Pilot.module.scss";
 
 import BiographyExperience from "./BiographyExperience/BiographyExperience";

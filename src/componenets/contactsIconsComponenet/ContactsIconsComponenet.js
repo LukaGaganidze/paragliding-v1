@@ -14,11 +14,19 @@ const ContactsIconsComponenet = () => {
         <Image src={telegram} alt="telegram logo" />
       </Link>
 
-      <Link href="#" className={classes["icons-box__link"]}>
+      <Link
+        href="https://viber.click/995599460052"
+        target="_blank"
+        className={classes["icons-box__link"]}
+      >
         <Image src={viber} alt="viber logo" />
       </Link>
 
-      <Link href="#" className={classes["icons-box__link"]}>
+      <Link
+        href="https://wa.link/eiteyy"
+        target="_blank"
+        className={classes["icons-box__link"]}
+      >
         <Image src={watsapp} alt="watsapp logo" />
       </Link>
     </div>

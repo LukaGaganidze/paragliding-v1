@@ -12,7 +12,7 @@ const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 const Pilot = () => {
   return (
-    <section className={classes["pilot"]}>
+    <section id="pilot" className={classes["pilot"]}>
       <div className={classes["pilot__content"]}>
         <div className={classes["pilot__content__heading"]}>
           <span className={classes["pilot__content__heading__pilot"]}>
@@ -58,7 +58,7 @@ const Pilot = () => {
             cherish for years to come!
           </p>
 
-          <Link href="#" className={classes["pilot__content__link"]}>
+          <Link href="/pilot" className={classes["pilot__content__link"]}>
             <div></div>
             <span>More Info</span>
           </Link>

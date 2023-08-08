@@ -14,7 +14,11 @@ const BookFlight = () => {
       </div>
 
       <div className={classes["book-flight__link-box"]}>
-        <Link className={classes["book-flight__link"]} href="#">
+        <Link
+          className={classes["book-flight__link"]}
+          href="https://wa.link/eiteyy"
+          target="_blank"
+        >
           Book Now
         </Link>
       </div>

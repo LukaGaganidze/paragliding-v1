@@ -13,6 +13,11 @@ import winterOne from "../../assets/paragliding-winter/winter-1.jpg";
 import winterTwo from "../../assets/paragliding-winter/winter-2.jpg";
 import winterThree from "../../assets/paragliding-winter/winter-3.jpg";
 
+// SUMMER
+import summerOne from "../../assets/paragliding-summer/paragliding-summer-1.jpg";
+import summerTwo from "../../assets/paragliding-summer/paragliding-summer-2.jpg";
+import summerThree from "../../assets/paragliding-summer/paragliding-summer-3.jpg";
+
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 const WINTER_DATA = [
@@ -41,6 +46,32 @@ const WINTER_DATA = [
     price: "100$",
   },
 ];
+const SUMMER_DATA = [
+  {
+    img: summerOne,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 1,
+    price: "100$",
+  },
+  {
+    img: summerTwo,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 2,
+    price: "100$",
+  },
+  {
+    img: summerThree,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 3,
+    price: "100$",
+  },
+];
 
 const BookFlight = () => {
   return (
@@ -48,7 +79,10 @@ const BookFlight = () => {
       <BookFlightHero />
       <Guide />
       <div className={classes["book-flight__pacages"]}>
-        <h2 className={classes["book-flight__pacages__heading"]}>
+        <h2
+          id="winter-pacages"
+          className={classes["book-flight__pacages__heading"]}
+        >
           Choose your flight package
           <span
             className={`${pacifico.className} ${classes["background-text"]}`}
@@ -61,6 +95,14 @@ const BookFlight = () => {
             cardsData={WINTER_DATA}
             booking={true}
             season="Winter"
+          />
+        </div>
+
+        <div id="summer-pacages" className={classes["book-flight__summer"]}>
+          <FlightPacages
+            cardsData={SUMMER_DATA}
+            booking={true}
+            season="Summer"
           />
         </div>
       </div>

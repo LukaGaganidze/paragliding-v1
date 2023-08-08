@@ -4,6 +4,7 @@
 .pilot {
   max-width: b.$container-large-1;
   margin: 0 auto b.$margin-large-5 auto;
+  padding-top: b.$margin-large-4;
 
   &__content {
     display: grid;
