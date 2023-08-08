@@ -17,7 +17,7 @@ const MenuBook = ({ className }) => {
         className={classes["menu-book__img1-box"]}
       >
         <div></div>
-        <span className={pacifico.className}>Booking Guide</span>
+        <span className={`${pacifico.className}`}>Booking Guide</span>
       </Link>
 
       <Link
@@ -26,7 +26,9 @@ const MenuBook = ({ className }) => {
         className={classes["menu-book__img2-box"]}
       >
         <div></div>
-        <span className={pacifico.className}>Summer Pacages</span>
+        <span className={`${pacifico.className} ${classes["section-name"]}`}>
+          Summer Pacages
+        </span>
       </Link>
 
       <Link
@@ -35,7 +37,9 @@ const MenuBook = ({ className }) => {
         className={classes["menu-book__img3-box"]}
       >
         <div></div>
-        <span className={pacifico.className}>Winter Pacages</span>
+        <span className={`${pacifico.className} ${classes["section-name"]}`}>
+          Winter Pacages
+        </span>
       </Link>
     </div>
   );

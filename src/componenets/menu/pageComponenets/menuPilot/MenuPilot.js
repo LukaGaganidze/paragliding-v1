@@ -12,11 +12,11 @@ const MenuPilot = ({ className }) => {
   const { closeMenu } = useMenuContext();
 
   return (
-    <div className={`${className} ${classes["menu-info"]}`}>
+    <div className={`${className} ${classes["menu-pilot"]}`}>
       <Link
         onClick={closeMenu}
         href={"/pilot"}
-        className={classes["menu-info__img1-box"]}
+        className={classes["menu-pilot__img1-box"]}
       >
         <div></div>
         <span className={pacifico.className}>Pilot Omar</span>
@@ -25,7 +25,7 @@ const MenuPilot = ({ className }) => {
       <Link
         onClick={closeMenu}
         href={"/pilot#certification"}
-        className={classes["menu-info__img2-box"]}
+        className={classes["menu-pilot__img2-box"]}
       >
         <div></div>
         <span className={pacifico.className}>Qualification</span>
@@ -34,7 +34,7 @@ const MenuPilot = ({ className }) => {
       <Link
         onClick={closeMenu}
         href={"/pilot#testimonials"}
-        className={classes["menu-info__img3-box"]}
+        className={classes["menu-pilot__img3-box"]}
       >
         <div></div>
         <span className={pacifico.className}>Testimonials</span>

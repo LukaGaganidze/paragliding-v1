@@ -54,3 +54,24 @@
   color: a.$grey-2;
   font-size: b.$font-size-mid;
 }
+
+@media (max-width: 550px) {
+  .link-box {
+    gap: 4rem;
+  }
+  .link,
+  .link:link,
+  .link:visited {
+    font-size: b.$font-size-small-3;
+  }
+}
+@media (max-width: 380px) {
+  .link-box {
+    gap: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .link-box {
+    gap: 1rem;
+  }
+}

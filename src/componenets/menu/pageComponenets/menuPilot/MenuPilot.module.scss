@@ -1,7 +1,7 @@
 @use "../../../../scss/abstracts" as a;
 @use "../../../../scss/base" as b;
 
-.menu-info {
+.menu-pilot {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -137,6 +137,39 @@
 
       & span {
         color: a.$main-color-red;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu-pilot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    height: 100%;
+    padding-bottom: 12rem;
+
+    &__img1-box,
+    &__img1-box:link,
+    &__img1-box:visited {
+      span {
+        font-size: b.$font-size-large-2;
+      }
+    }
+    &__img2-box,
+    &__img2-box:link,
+    &__img2-box:visited {
+      span {
+        font-size: b.$font-size-large-2;
+      }
+    }
+    &__img3-box,
+    &__img3-box:link,
+    &__img3-box:visited {
+      span {
+        font-size: b.$font-size-large-2;
       }
     }
   }

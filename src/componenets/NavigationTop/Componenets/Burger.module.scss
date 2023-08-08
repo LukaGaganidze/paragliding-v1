@@ -23,3 +23,14 @@
     background-color: a.$grey;
   }
 }
+
+@media (max-width: 1000px) {
+  .burger-box {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 900px) {
+  .burger-box {
+    display: none;
+  }
+}

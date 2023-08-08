@@ -33,6 +33,7 @@
 }
 
 .close-container {
+  z-index: 10000;
   position: absolute;
   right: 3rem;
   top: 2rem;
@@ -102,7 +103,7 @@
 }
 
 .main-content {
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
@@ -122,5 +123,22 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .close-container {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 1050px) {
+  .close-container {
+    transform: scale(0.4);
+  }
+}
+@media (max-width: 900px) {
+  .menu {
+    display: none;
   }
 }

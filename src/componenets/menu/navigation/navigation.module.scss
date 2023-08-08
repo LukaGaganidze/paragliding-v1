@@ -6,7 +6,7 @@
   display: flex;
   list-style: none;
   align-items: center;
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   margin: 2rem auto 0 auto;
 }
 
@@ -63,4 +63,22 @@
 .dark-text:active {
   color: a.$grey-2;
   font-size: b.$font-size-mid;
+}
+
+@media (max-width: 1300px) {
+  .link {
+    width: 20rem;
+  }
+}
+@media (max-width: 1100px) {
+  .link {
+    width: 20rem;
+    font-size: b.$font-size-mid;
+  }
+}
+@media (max-width: 1050px) {
+  .link {
+    width: 15rem;
+    font-size: b.$font-size-mid;
+  }
 }
