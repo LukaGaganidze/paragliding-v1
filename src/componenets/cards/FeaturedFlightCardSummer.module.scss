@@ -74,6 +74,7 @@
       opacity: 0.7;
       width: 100%;
       height: auto;
+      scale: 1.25;
     }
   }
 
@@ -205,4 +206,10 @@
 .more-info:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 25rem;
+  }
 }

@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 import classes from "./NavLinks.module.scss";
 
+import { useMenuContext } from "@/context/MenuContext";
 import LocalProgressBar from "../Componenets/LocalProgressBar";
 
-import { useMenuContext } from "@/context/MenuContext";
-
-// import { useRouter } from "next/router";
+import Router from "next/router";
 
 const NavLinks = ({ sticky }) => {
   // MENU GLOBAL CONTEXT,
@@ -78,7 +77,6 @@ const NavLinks = ({ sticky }) => {
       {menuInfoTopNavBar && <LocalProgressBar />}
       {menuPilotTopNavBar && <LocalProgressBar />}
       {menuContactTopNavBar && <LocalProgressBar />}
-
       <li className={classes["link-list"]}>
         <Link
           onClick={homeWasClicked}
@@ -90,7 +88,6 @@ const NavLinks = ({ sticky }) => {
           Home
         </Link>
       </li>
-
       <li className={classes["link-list"]}>
         <Link
           onClick={bookWasClicked}
@@ -102,7 +99,6 @@ const NavLinks = ({ sticky }) => {
           Book Flight
         </Link>
       </li>
-
       <li className={classes["link-box"]}>
         <Link
           onClick={infoWasClicked}
@@ -114,7 +110,6 @@ const NavLinks = ({ sticky }) => {
           Flight Info
         </Link>
       </li>
-
       <li className={classes["link-box"]}>
         <Link
           onClick={pilotWasClicked}
@@ -126,7 +121,6 @@ const NavLinks = ({ sticky }) => {
           Pilot
         </Link>
       </li>
-
       <li className={classes["link-box"]}>
         <Link
           onClick={contactWasClicked}

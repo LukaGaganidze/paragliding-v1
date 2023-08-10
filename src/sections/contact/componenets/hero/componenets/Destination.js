@@ -24,9 +24,9 @@ const TRAVEL_DATA = [
   },
 ];
 
-const Destination = () => {
+const Destination = ({ className }) => {
   return (
-    <div className={classes["destination-container"]}>
+    <div className={`${className} ${classes["destination-container"]}`}>
       <h2 className={oswald.className}>
         Reach Gudauri from Different Cities: Small Guide for Travelers
       </h2>

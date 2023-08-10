@@ -1,4 +1,8 @@
 import React from "react";
+import Image from "next/image";
+
+import mobileBackground from "../../../../assets/pages/contact/hero/backgrougImage/mobileBAckground.jpg";
+import mobileBackground2 from "../../../../assets/pages/contact/hero/backgrougImage/mobileBAckground-2.jpg";
 
 import classes from "./Hero.module.scss";
 
@@ -16,11 +20,38 @@ const Hero = () => {
   return (
     <section className={classes["hero"]}>
       {/* BACKGROUND VIDEO */}
-      <BackgroundVideo />
+      <BackgroundVideo className={classes["mobile-version"]} />
 
+      {/* MOBILE */}
+      <Image
+        className={classes["mobile-vers-background"]}
+        src={mobileBackground}
+        alt="pirigliding flight"
+        placeholder="blur"
+        quality={100}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
+      <Image
+        className={classes["mobile-vers-background-2"]}
+        src={mobileBackground2}
+        alt="pirigliding flight"
+        placeholder="blur"
+        quality={100}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
       {/* CONTENT */}
       {/* HEADING */}
-      <div className={classes["hero__heading"]}>
+      <div
+        className={`${classes["hero__heading"]} ${classes["mobile-version-heading"]}`}
+      >
         <h2 className={bagel.className}>Your Questions - Our Priority</h2>
 
         <div className={classes["hero__heading__sub"]}>

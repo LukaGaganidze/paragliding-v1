@@ -56,3 +56,26 @@
 .icon:hover ~ .content .content--hover-content {
   transform: translateX(1rem);
 }
+
+@media (max-width: 1000px) {
+  .content {
+    display: none;
+  }
+  .icon {
+    transform: scale(0.8);
+    bottom: 2rem;
+  }
+}
+@media (max-width: 850px) {
+  .icon {
+    transform: scale(0.6);
+    bottom: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .icon {
+    transform: scale(0.5);
+    bottom: 1rem;
+    left: 1rem;
+  }
+}

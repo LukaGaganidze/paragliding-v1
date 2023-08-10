@@ -26,3 +26,36 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .to-gudauri-sec {
+    padding-top: b.$margin-large-5;
+    margin-bottom: b.$margin-large-3;
+
+    &__heading {
+      font-size: b.$font-size-large;
+      max-width: b.$container-large-1;
+
+      &__sub {
+        top: -9rem;
+        font-size: 10rem;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .to-gudauri-sec {
+    padding-top: b.$margin-large-1;
+    margin-bottom: b.$margin-mid;
+
+    &__heading {
+      font-size: b.$font-size-mid;
+      max-width: b.$container-large-1;
+
+      &__sub {
+        top: -6rem;
+        font-size: 7rem;
+      }
+    }
+  }
+}

@@ -3,9 +3,9 @@
 .icons {
   position: fixed;
   z-index: 1;
-  top: 50%;
+  bottom: 50%;
   right: 0;
-  transform: translateY(-50%);
+  transform: translateY(50%);
 
   display: flex;
   flex-direction: column;
@@ -13,7 +13,6 @@
 
   &--individual {
     width: 5rem;
-    background-color: a.$main-color-red;
     height: 5rem;
     cursor: pointer;
     position: relative;
@@ -52,5 +51,20 @@
   &--individual--img {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .icons {
+    bottom: 1rem;
+    transform: translateY(0);
+
+    &--individual {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .icons--individual--hover {
+    display: none;
   }
 }

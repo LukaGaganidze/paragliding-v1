@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import backupImage from "../../../../../assets/pages/contact/hero/backgrougImage/contactBackground.jpg";
 
-const BackgroundVideo = () => {
+const BackgroundVideo = ({ className }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const BackgroundVideo = () => {
   }, []);
 
   return (
-    <>
+    <div className={className}>
       {/* IMAGE BEFORE THE VIDEO IS LAODING  */}
 
       <div className={classes["img-container"]}>
@@ -53,7 +53,7 @@ const BackgroundVideo = () => {
           className={classes.video__content}
         />
       </video>
-    </>
+    </div>
   );
 };
 

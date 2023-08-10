@@ -50,3 +50,42 @@
 .item:hover .item__name span {
   color: a.$main-color-red;
 }
+
+@media (max-width: 1000px) {
+  .item,
+  .item:link,
+  .item:visited {
+    padding: 0 1rem;
+    border-radius: 1rem;
+
+    span {
+      gap: 0.5rem;
+      font-size: b.$font-size-small;
+    }
+
+    &__name {
+      span {
+        color: a.$main-color-white;
+        letter-spacing: 2px;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .location__icon {
+    color: a.$main-color-red;
+    transform: translateY(0rem);
+
+    font-size: b.$font-size-small-3;
+    width: 2rem;
+  }
+
+  .destination__icon {
+    font-size: b.$font-size-small-3;
+    width: 2rem;
+  }
+
+  .item:hover .item__name span {
+    color: a.$main-color-red;
+  }
+}

@@ -1,11 +1,11 @@
 @use "../../scss/abstracts" as a;
 @use "../../scss/base" as b;
+
 .flight {
-  height: 69rem;
   display: flex;
   align-items: flex-end;
   position: relative;
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   margin: 0 auto;
 
   &__heading {
@@ -67,16 +67,6 @@
   }
 }
 
-// optional
-.winter-heading {
-  font-size: 72px;
-  background: -webkit-linear-gradient(
-    a.$winter-color-dark,
-    a.$winter-color-light
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .summer-heading {
   font-size: 72px;
   background: -webkit-linear-gradient(
@@ -85,4 +75,48 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1250px) {
+  .flight {
+    &__heading {
+      top: 0rem;
+      left: 2rem;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .flight {
+    padding: 0 2rem;
+    &__heading {
+      &__highlited {
+        font-size: b.$font-size-large-2;
+      }
+
+      &__normal {
+        font-size: b.$font-size-mid;
+      }
+    }
+  }
+}
+@media (max-width: 1015px) {
+  // .flight {
+  //   padding: 0 2rem;
+  //   &__heading {
+  //     &__highlited {
+  //       font-size: b.$font-size-large-2;
+  //     }
+
+  //     &__normal {
+  //       font-size: b.$font-size-mid;
+  //     }
+  //   }
+  // }
+  .flight__featured {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    align-items: center;
+    gap: 5rem;
+  }
 }

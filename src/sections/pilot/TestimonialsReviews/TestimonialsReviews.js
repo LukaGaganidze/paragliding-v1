@@ -17,7 +17,7 @@ import { Pacifico } from "next/font/google";
 
 import classes from "./TestimonialsReviews.module.scss";
 
-import main from "../../../assets/pages/pilot/testimoanial.png";
+import main from "../../../assets/pages/pilot/testimonial-main-pic.jpg";
 
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
@@ -52,6 +52,7 @@ import italy from "../../../assets/pages/pilot/testimonials/countries/italy.png"
 import newZealand from "../../../assets/pages/pilot/testimonials/countries/new-zealand.png";
 import russia from "../../../assets/pages/pilot/testimonials/countries/russia.png";
 import unitedKingdom from "../../../assets/pages/pilot/testimonials/countries/united-kingdom.png";
+
 import Testimonial from "./componenets/Testimonial";
 
 const TESTIMONISLAS_DATA = [
@@ -240,7 +241,6 @@ const TestimonialsReviews = () => {
             customers have to say:
           </p>
 
-          {/* TESTIMONIALS */}
           <Swiper
             className={classes["test-slider"]}
             slidesPerView={1}

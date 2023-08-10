@@ -36,12 +36,18 @@ const IntroductionBackground = () => {
         </div>
       </div>
 
-      <div className={classes["intro__background-img"]}>
-        <Image
-          src={cover}
-          alt="bachground cover image of paragliding pilot personal page"
-        />
-      </div>
+      <Image
+        className={classes["main-background-image"]}
+        src={cover}
+        alt="bachground cover image of paragliding pilot personal page"
+        placeholder="blur"
+        quality={100}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
     </div>
   );
 };

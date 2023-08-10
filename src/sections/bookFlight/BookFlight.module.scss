@@ -3,16 +3,16 @@
 
 .book-flight {
   &__pacages {
-    width: b.$container-large-1;
+    max-width: b.$container-large-1;
     margin: 0 auto;
     margin-top: b.$margin-large-3;
     margin-bottom: b.$margin-large;
 
     &__heading {
+      margin-top: b.$margin-large-5;
       font-size: b.$font-size-large-3;
       position: relative;
       font-weight: 100;
-      margin-bottom: b.$margin-small-2;
 
       & .background-text {
         position: absolute;
@@ -33,3 +33,82 @@
     margin-bottom: b.$margin-large-6;
   }
 }
+
+.flight__heading {
+  font-size: b.$font-size-large-3;
+  margin-bottom: b.$margin-mid;
+  text-align: center;
+
+  &__highlited__winter {
+    background: -webkit-linear-gradient(
+      a.$winter-color-dark,
+      a.$winter-color-light
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__highlited__summer {
+    background: -webkit-linear-gradient(
+      a.$summer-color-coral,
+      a.$summer-color-turquoise
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 1300px) {
+  .book-flight__pacages__heading {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .book-flight__pacages__heading {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .flight__heading {
+    font-size: b.$font-size-large-2;
+  }
+}
+@media (max-width: 500px) {
+  .flight__heading {
+    font-size: b.$font-size-large-1;
+  }
+}
+
+/* <h2 className={classes["flight__heading"]}>
+{booking ? (
+  <span
+    className={`${caveat.className} ${
+      classes["flight__heading__highlited-booking"]
+    }  ${
+      season === "Winter"
+        ? classes["winter-heading"]
+        : classes["summer-heading"]
+    }`}
+  >
+    {season} Flights
+  </span>
+) : (
+  <span
+    className={`${bagel.className} ${classes["flight__heading__highlited"]}`}
+  >
+    {season} Flights
+  </span>
+)}
+
+<span className={classes["flight__heading__normal"]}>
+  Featured paragliding flight packages for the {season} season{" "}
+  {season === "Winter" ? (
+    <span className={classes["flight__heading__normal__date"]}>
+      December 10 to April 15
+    </span>
+  ) : (
+    <span className={classes["flight__heading__normal__date"]}>
+      April 16 to December 9{" "}
+    </span>
+  )}
+</span>
+</h2> */

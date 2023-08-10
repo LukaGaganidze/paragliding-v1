@@ -26,7 +26,7 @@ const MenuHome = ({ className }) => {
 
       <Link
         onClick={closeMenu}
-        href={"/#featured"}
+        href={"/#winter"}
         className={classes["menu-home__img2-box"]}
       >
         <div></div>

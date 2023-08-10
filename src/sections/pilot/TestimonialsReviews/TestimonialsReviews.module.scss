@@ -6,7 +6,7 @@
   margin-bottom: b.$margin-large-3;
 
   &__heading {
-    width: b.$container-large-1;
+    max-width: b.$container-large-1;
     margin: 0 auto;
 
     font-size: b.$font-size-large-3;
@@ -34,7 +34,7 @@
 
 .content {
   margin: 0 auto;
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
@@ -83,4 +83,115 @@
 .test-slider {
   width: 55rem;
   padding: 1.5rem;
+}
+
+@media (max-width: 1330px) {
+  .testimonials__heading {
+    justify-content: center;
+  }
+}
+@media (max-width: 1220px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    gap: 2rem;
+  }
+  .test-slider {
+    transform: translateX(-2.5rem) scale(0.9);
+  }
+}
+@media (max-width: 1000px) {
+  .testimonials__heading {
+    font-size: b.$font-size-large-2;
+    gap: 2rem;
+
+    &__letter {
+      position: absolute;
+      left: -3rem;
+      top: -90%;
+      color: rgba($color: a.$heading-color-d-white, $alpha: 0.6);
+      font-size: 10rem;
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .testimonials__heading {
+    font-size: b.$font-size-large;
+
+    &__letter {
+      position: absolute;
+      left: -3rem;
+      top: -100%;
+      color: rgba($color: a.$heading-color-d-white, $alpha: 0.6);
+      font-size: 7rem;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    gap: 2rem;
+
+    &__text-box {
+      font-size: b.$font-size-mid;
+      font-weight: 100;
+    }
+  }
+
+  .test-slider {
+    transform: translateX(-7.7rem) scale(0.72);
+  }
+}
+@media (max-width: 470px) {
+  .testimonials__heading {
+    font-size: b.$font-size-mid-1;
+    gap: 1rem;
+
+    &__letter {
+      left: -1rem;
+      top: -150%;
+    }
+  }
+}
+@media (max-width: 430px) {
+  .content {
+    max-width: 30rem;
+
+    &__text-box {
+      font-size: b.$font-size-mid;
+      font-weight: 100;
+    }
+  }
+  .test-slider {
+    transform: translateX(-12.5rem) scale(0.55);
+  }
+}
+@media (max-width: 365px) {
+  .testimonials__heading {
+    font-size: b.$font-size-mid;
+
+    &__letter {
+      left: -1rem;
+      top: -200%;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .content {
+    max-width: 25rem;
+
+    &__text-box {
+      font-size: b.$font-size-smal-2;
+      font-weight: 100;
+    }
+  }
+  .test-slider {
+    transform: translateX(-15rem) scale(0.4);
+  }
 }

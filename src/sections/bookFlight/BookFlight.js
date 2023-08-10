@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from "./BookFlight.module.scss";
 
-import { Pacifico } from "next/font/google";
+import { Caveat, Pacifico } from "next/font/google";
 
 import BookFlightHero from "./hero/BookFlightHero";
 import Guide from "./guide/Guide";
@@ -19,6 +19,7 @@ import summerTwo from "../../assets/paragliding-summer/paragliding-summer-2.jpg"
 import summerThree from "../../assets/paragliding-summer/paragliding-summer-3.jpg";
 
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
+const caveat = Caveat({ subsets: ["latin"], weight: ["400"] });
 
 const WINTER_DATA = [
   {
@@ -91,6 +92,13 @@ const BookFlight = () => {
           </span>
         </h2>
         <div className={classes["book-flight__winter"]}>
+          <h2 className={classes["flight__heading"]}>
+            <span
+              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__winter"]}`}
+            >
+              Winter Flights
+            </span>
+          </h2>
           <FlightPacages
             cardsData={WINTER_DATA}
             booking={true}
@@ -99,6 +107,13 @@ const BookFlight = () => {
         </div>
 
         <div id="summer-pacages" className={classes["book-flight__summer"]}>
+          <h2 className={classes["flight__heading"]}>
+            <span
+              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__summer"]}`}
+            >
+              Summer Flights
+            </span>
+          </h2>
           <FlightPacages
             cardsData={SUMMER_DATA}
             booking={true}

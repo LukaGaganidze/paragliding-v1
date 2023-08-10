@@ -13,7 +13,7 @@ import img4 from "../../../../assets/pages/flightInfo/FlightInfoHero/img4.jpg";
 import img5 from "../../../../assets/pages/flightInfo/FlightInfoHero/img5.jpg";
 import img6 from "../../../../assets/pages/flightInfo/FlightInfoHero/img6.jpg";
 
-const BackgroundImages = () => {
+const BackgroundImages = ({ className }) => {
   // ACTIVE IMAGE
   const [img, setImg] = useState(img1);
 
@@ -95,12 +95,18 @@ const BackgroundImages = () => {
   }, [img]);
 
   return (
-    <>
+    <div className={className}>
       {img1State && (
         <Image
           className={`${classes["img"]} ${classes.effect}`}
           src={img}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
 
@@ -109,6 +115,12 @@ const BackgroundImages = () => {
           className={`${classes["img"]} ${classes.effect}`}
           src={img2}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
 
@@ -117,6 +129,12 @@ const BackgroundImages = () => {
           className={`${classes["img"]} ${classes.effect}`}
           src={img3}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
 
@@ -125,6 +143,12 @@ const BackgroundImages = () => {
           className={`${classes["img"]} ${classes.effect}`}
           src={img4}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
 
@@ -133,6 +157,12 @@ const BackgroundImages = () => {
           className={`${classes["img"]} ${classes.effect}`}
           src={img5}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
 
@@ -141,9 +171,15 @@ const BackgroundImages = () => {
           className={`${classes["img"]} ${classes.effect}`}
           src={img6}
           alt="paragliding flight in beautiful nature view"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
         />
       )}
-    </>
+    </div>
   );
 };
 

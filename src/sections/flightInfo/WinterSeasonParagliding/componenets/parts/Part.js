@@ -28,7 +28,7 @@ const Part = ({ image, text, imgLeftSide, heading, button }) => {
     // INTERSECTION OBSERVER OPTIONS part
     const options = {
       root: null,
-      threshold: 0.4,
+      threshold: 0,
       rootMargin: "",
     };
 
@@ -64,7 +64,7 @@ const Part = ({ image, text, imgLeftSide, heading, button }) => {
             src={image}
             alt="Summer enviroment and paragliding"
           />
-          <div>
+          <div className={classes["text-box"]}>
             <h3
               className={`${caveat.className} ${classes["similar__heading"]} ${classes["part__heading"]}`}
             >
@@ -90,7 +90,7 @@ const Part = ({ image, text, imgLeftSide, heading, button }) => {
             classes[partVisible ? "active" : ""]
           }`}
         >
-          <div>
+          <div className={classes["text-box"]}>
             <h3
               className={`${caveat.className} ${classes["similar__heading"]} ${classes["part-reverse__heading"]}`}
             >

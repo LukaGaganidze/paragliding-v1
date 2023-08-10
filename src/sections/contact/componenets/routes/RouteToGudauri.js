@@ -78,6 +78,7 @@ const RouteToGudauri = () => {
           <span className={pacifico.className}>Guide</span>
         </div>
       </h2>
+
       <div>
         {ROUTES_DATA.map((item) => (
           <Route

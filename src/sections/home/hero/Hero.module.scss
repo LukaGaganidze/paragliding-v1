@@ -1,3 +1,5 @@
+@use "../../../scss/abstracts" as a;
+@use "../../../scss/base" as b;
 .hero {
   height: 100vh;
   overflow: hidden;
@@ -101,5 +103,94 @@
   100% {
     opacity: 1;
     transform: translateX(-50%) translateY(0rem);
+  }
+}
+
+.mobile-background-1 {
+  display: none;
+  filter: contrast(60%);
+}
+.mobile-background-2 {
+  display: none;
+  filter: contrast(60%);
+}
+
+@media (max-width: 1350px) {
+  .hero__main-heading {
+    font-size: b.$font-size-large-2;
+  }
+}
+@media (max-width: 1025px) {
+  .hero__main-heading {
+    font-size: b.$font-size-large-1;
+  }
+}
+@media (max-width: 1000px) {
+  .mobile-background-1 {
+    display: block;
+  }
+  .hero__booking-btn {
+    font-size: 3rem;
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.6rem;
+  }
+}
+@media (max-width: 860px) {
+  .hero__main-heading {
+    font-size: b.$font-size-large;
+  }
+  .hero__booking-btn {
+    font-size: 2rem;
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__main-heading {
+    font-size: b.$font-size-mid-2;
+  }
+}
+@media (max-width: 600px) {
+  .hero__main-heading {
+    font-size: b.$font-size-mid-1;
+  }
+}
+@media (max-width: 530px) {
+  .hero__main-heading {
+    font-size: b.$font-size-mid;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-background-1 {
+    display: none;
+  }
+  .mobile-background-2 {
+    display: block;
+  }
+  .hero__booking-btn {
+    animation-duration: 0.8s;
+  }
+
+  .hero__booking-btn {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.6rem;
+  }
+}
+@media (max-width: 350px) {
+  .hero__booking-btn {
+    bottom: -8rem;
+  }
+  .hero__main-heading__right {
+    display: none;
+  }
+  .hero__main-heading__left {
+    animation-duration: 0s;
   }
 }

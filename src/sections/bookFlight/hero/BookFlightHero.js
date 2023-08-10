@@ -16,7 +16,17 @@ const BookFlightHero = () => {
     <section className={classes["hero"]}>
       {/* ABSOLUTELY POSITIONED BACKGROUND IMAGE */}
       <div className={classes["hero__img-box"]}>
-        <Image src={heroImage} alt="Tandem paraglidng in clouds" />
+        <Image
+          src={heroImage}
+          alt="Tandem paraglidng in clouds"
+          placeholder="blur"
+          quality={100}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        />
       </div>
 
       {/* HERO CONTENT */}

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Pacifico } from "next/font/google";
 
-import testPiv from "../../../assets/testimg/paragliding-1.png";
+import testPiv from "../../../assets/pages/pilot/pilot-omo.jpg";
 import Image from "next/image";
 
 import classes from "./Pilot.module.scss";

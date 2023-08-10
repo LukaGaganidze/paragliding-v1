@@ -14,7 +14,7 @@ const Pilot = () => {
       <BiographyExperience />
       <CertificationsQualifications />
       <GalleryMedia />
-      <BookingFeature />
+      {/* <BookingFeature /> */}
       <TestimonialsReviews />
     </div>
   );

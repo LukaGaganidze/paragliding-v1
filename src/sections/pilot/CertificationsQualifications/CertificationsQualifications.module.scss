@@ -5,7 +5,7 @@
   padding-top: b.$margin-large-5;
   margin-bottom: b.$margin-large-3;
   &__heading {
-    width: b.$container-large-1;
+    max-width: b.$container-large-1;
     margin: 0 auto;
 
     font-size: b.$font-size-large-3;
@@ -32,7 +32,7 @@
 }
 
 .content {
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   margin: 0 auto;
 
   display: grid;
@@ -82,6 +82,114 @@
     &__special-2 {
       display: inline;
       border-bottom: solid a.$main-color-red 2px;
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .certification__heading {
+    justify-content: center;
+  }
+}
+@media (max-width: 1220px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 50rem;
+  }
+}
+@media (max-width: 1000px) {
+  .certification__heading {
+    font-size: b.$font-size-large-2;
+    gap: 2rem;
+
+    &__letter {
+      position: absolute;
+      left: -3rem;
+      top: -90%;
+      color: rgba($color: a.$heading-color-d-white, $alpha: 0.6);
+      font-size: 10rem;
+      z-index: -1;
+    }
+  }
+}
+@media (max-width: 660px) {
+  .certification__heading {
+    font-size: b.$font-size-large;
+
+    &__letter {
+      position: absolute;
+      left: -3rem;
+      top: -100%;
+      color: rgba($color: a.$heading-color-d-white, $alpha: 0.6);
+      font-size: 7rem;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .content {
+    max-width: 40rem;
+    gap: 2rem;
+
+    &__text {
+      font-size: b.$font-size-mid;
+      font-weight: 100;
+    }
+  }
+}
+@media (max-width: 470px) {
+  .certification__heading {
+    font-size: b.$font-size-mid-1;
+    gap: 1rem;
+
+    &__letter {
+      left: -1rem;
+      top: -150%;
+    }
+  }
+}
+@media (max-width: 430px) {
+  .content {
+    max-width: 30rem;
+    gap: 2rem;
+
+    &__text {
+      font-size: b.$font-size-smal-2;
+      font-weight: 100;
+    }
+  }
+}
+@media (max-width: 365px) {
+  .certification__heading {
+    font-size: b.$font-size-mid;
+
+    &__letter {
+      left: -1rem;
+      top: -200%;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .content {
+    max-width: 25rem;
+    gap: 2rem;
+
+    &__text {
+      font-size: b.$font-size-smal-2;
+      font-weight: 100;
+    }
+  }
+}
+@media (max-width: 300px) {
+  .certification__heading {
+    font-size: b.$font-size-small-3;
+
+    &__letter {
+      left: -1rem;
+      top: -200%;
+      font-size: 5rem;
     }
   }
 }

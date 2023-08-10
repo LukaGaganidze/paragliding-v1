@@ -1,6 +1,6 @@
 .introduciton {
   width: 100%;
-  height: 100vh;
+  height: 77rem;
   overflow: hidden;
   position: relative;
 }
@@ -71,5 +71,11 @@
   }
   &__not-intersecting {
     width: 50%;
+  }
+}
+
+@media (max-width: 1330px) {
+  .introduciton {
+    display: none;
   }
 }

@@ -72,29 +72,56 @@ import Image from "next/image";
 const GalleryMedia = () => {
   return (
     <section className={classes["slider"]}>
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={"5px"}
-        loop={true}
-        navigation={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay, Pagination, Navigation]}
-      >
-        {SLIDER_DATA.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className={classes["slider__img-container"]}>
-              <Image
-                quality={50}
-                src={item.img}
-                alt="Beatiful paragliding image"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={classes["slider__desc"]}>
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={"5px"}
+          loop={true}
+          navigation={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {SLIDER_DATA.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className={classes["slider__img-container"]}>
+                <Image
+                  quality={50}
+                  src={item.img}
+                  alt="Beatiful paragliding image"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className={classes["slider__mobile"]}>
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={"5px"}
+          loop={true}
+          navigation={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          {SLIDER_DATA.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className={classes["slider__img-container"]}>
+                <Image
+                  quality={50}
+                  src={item.img}
+                  alt="Beatiful paragliding image"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };

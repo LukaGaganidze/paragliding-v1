@@ -2,7 +2,7 @@
 @use "../../../../../scss/base" as b;
 
 .route {
-  width: b.$container-large;
+  max-width: b.$container-large;
   margin: 0 auto;
   padding: 2rem;
   box-shadow: 0px 0px 25px 7px rgba($color: a.$main-color-black, $alpha: 0.2);
@@ -56,6 +56,73 @@
         letter-spacing: 1px;
         font-weight: 800;
       }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .route {
+    margin: 0 auto;
+    max-width: 50rem;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-content-box {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 550px) {
+  .route {
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-content-box {
+    flex-direction: column-reverse;
+  }
+  .travel-info {
+    font-size: b.$font-size-smal-2;
+  }
+  .route__content {
+    & h2 {
+      font-size: b.$font-size-mid;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .route {
+    margin: 0 auto;
+    max-width: 30rem;
+  }
+
+  .travel-info {
+    font-size: b.$font-size-small;
+  }
+  .route__content {
+    & h2 {
+      font-size: b.$font-size-small-3;
+    }
+  }
+}
+@media (max-width: 310px) {
+  .route {
+    margin: 0 auto;
+    max-width: 24rem;
+  }
+
+  .travel-info {
+    font-size: b.$font-size-small;
+  }
+  .route__content {
+    & h2 {
+      font-size: b.$font-size-small-3;
     }
   }
 }

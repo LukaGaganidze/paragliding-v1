@@ -27,7 +27,6 @@
 
     & span {
       position: absolute;
-      width: 90rem;
       top: -80%;
       left: -6rem;
       z-index: -1;
@@ -44,4 +43,74 @@
 
 .book-flight__summer {
   margin-bottom: b.$margin-large-2;
+}
+
+@media (max-width: 1000px) {
+  .summer-sec {
+    padding-top: 0rem;
+    &__heading {
+      font-size: b.$font-size-large-1;
+
+      & span {
+        position: absolute;
+        top: -80%;
+        left: -2rem;
+        z-index: -1;
+        font-size: 8rem;
+      }
+    }
+  }
+}
+@media (max-width: 550px) {
+  .summer-sec {
+    &__heading {
+      font-size: b.$font-size-large;
+
+      & span {
+        top: -80%;
+        left: -2rem;
+        z-index: -1;
+        font-size: 6rem;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .summer-sec {
+    &__heading {
+      font-size: b.$font-size-mid-2;
+
+      & span {
+        top: -100%;
+        z-index: -1;
+        font-size: 5rem;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .summer-sec {
+    &__heading {
+      font-size: b.$font-size-mid;
+
+      & span {
+        top: -100%;
+        left: -2rem;
+        font-size: 5rem;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .summer-sec {
+    &__heading {
+      font-size: b.$font-size-mid;
+
+      & span {
+        top: -100%;
+        left: 1rem;
+        font-size: 4rem;
+      }
+    }
+  }
 }

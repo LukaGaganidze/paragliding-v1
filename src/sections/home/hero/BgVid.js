@@ -4,7 +4,7 @@ import classes from "./BgVid.module.scss";
 import Image from "next/image";
 import backupImage from "../../../assets/helper-imgs/optional-image.jpg";
 
-const BackgroundVideo = () => {
+const BackgroundVideo = ({ className }) => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const BackgroundVideo = () => {
   }, []);
 
   return (
-    <>
+    <div className={className}>
       {/* IMAGE BEFORE THE VIDEO IS LAODING  */}
 
       <div className={classes["img-container"]}>
@@ -57,7 +57,7 @@ const BackgroundVideo = () => {
           className={classes.video__content}
         />
       </video>
-    </>
+    </div>
   );
 };
 

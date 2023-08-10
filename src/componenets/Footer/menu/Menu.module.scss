@@ -2,6 +2,10 @@
 @use "../../../scss/base" as b;
 
 .menu {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   & h2 {
     border-left: solid a.$main-color-red;
     padding: 0 1rem;
@@ -36,5 +40,11 @@
     a:active {
       transform: translateX(1rem);
     }
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    align-items: flex-start;
   }
 }

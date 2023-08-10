@@ -2,7 +2,7 @@
 @use "../../../scss/base" as b;
 
 .guide-sec {
-  width: b.$container-large-1;
+  max-width: b.$container-large-1;
   margin: 0 auto 0 auto;
   padding-top: b.$margin-large-6;
 
@@ -24,7 +24,7 @@
 }
 
 .step {
-  width: b.$container-large;
+  max-width: b.$container-large;
   margin: 0 auto;
   padding: 3rem;
   border-radius: 0.5rem;
@@ -126,6 +126,74 @@
     &__abs-num {
       font-size: 40rem;
       transform: translate(-50%, -63%);
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .guide-sec {
+    max-width: b.$container-large;
+
+    & h2 {
+      margin-bottom: b.$margin-large;
+    }
+  }
+}
+@media (max-width: 1220px) {
+  .guide-sec {
+    max-width: b.$container-large;
+
+    & h2 {
+      text-align: center;
+
+      & span {
+        position: absolute;
+        top: -18rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        color: rgba($color: a.$heading-color-d-white-2, $alpha: 1);
+        font-size: 25rem;
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .guide-sec {
+    max-width: b.$container-large;
+    padding-top: b.$margin-large-3;
+
+    & h2 {
+      font-size: b.$font-size-mid-3;
+      margin-bottom: b.$margin-mid;
+
+      & span {
+        top: -200%;
+        font-size: 10rem;
+      }
+    }
+    & p {
+      font-size: b.$font-size-small-3;
+    }
+  }
+  .step {
+    display: flex;
+    flex-direction: column;
+    max-width: b.$container-mid;
+    & h3 {
+      font-size: b.$font-size-mid;
+    }
+  }
+
+  .step__text-box__abs-num {
+    font-size: 50rem;
+  }
+  .step-3 {
+    &__text-box {
+      &__abs-num {
+        font-size: 25rem;
+        transform: translate(-50%, -63%);
+      }
     }
   }
 }

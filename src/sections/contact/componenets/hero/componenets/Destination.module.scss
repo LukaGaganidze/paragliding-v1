@@ -17,3 +17,25 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 1120px) {
+  .destination {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .destination-container {
+    & h2 {
+      font-size: b.$font-size-mid;
+    }
+  }
+  .destination {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

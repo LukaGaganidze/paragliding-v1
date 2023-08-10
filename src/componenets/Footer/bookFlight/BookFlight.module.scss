@@ -2,6 +2,7 @@
 @use "../../../scss/base" as b;
 
 .book-flight {
+  width: 20rem;
   & h2 {
     letter-spacing: 1px;
     display: inline-block;

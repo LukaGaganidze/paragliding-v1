@@ -12,6 +12,11 @@ import summerOne from "../../../assets/paragliding-summer/paragliding-summer-1.j
 import summerTwo from "../../../assets/paragliding-summer/paragliding-summer-2.jpg";
 import summerThree from "../../../assets/paragliding-summer/paragliding-summer-3.jpg";
 
+import { Lilita_One, Caveat } from "next/font/google";
+
+const bagel = Lilita_One({ subsets: ["latin"], weight: ["400"] });
+const caveat = Caveat({ subsets: ["latin"], weight: ["400"] });
+
 const SUMMER_DATA = [
   {
     img: summerOne,
@@ -69,7 +74,7 @@ const WINTER_DATA = [
 // SUMMER DATA
 const FeaturedFlight = () => {
   return (
-    <section id="featured" className={classes["featured-flights"]}>
+    <section className={classes["featured-flights"]}>
       <div className={classes["featured-flights__heading"]}>
         <h2 className={classes["featured-flights__heading__winter"]}>
           <a href="#winter">Winter Flights</a>
@@ -79,11 +84,48 @@ const FeaturedFlight = () => {
         </h2>
       </div>
 
-      <div className={classes["winter"]} id="winter">
+      {/* HEAEDING */}
+      <h2 id="winter" className={classes["flight__heading"]}>
+        <span
+          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}
+        >
+          Winter Flights
+        </span>
+
+        <span className={classes["flight__heading__normal"]}>
+          <span>
+            Featured paragliding flight packages for the Winter season{" "}
+          </span>
+          <span className={classes["flight__heading__normal__date"]}>
+            December 10 to April 15
+          </span>
+        </span>
+      </h2>
+
+      {/*  */}
+
+      <div className={classes["winter"]}>
         <Flights season="Winter" cardsData={WINTER_DATA} />
       </div>
 
-      <div className={classes["summer"]} id="summer">
+      {/* HEAEDING */}
+      <h2 id="summer" className={classes["flight__heading"]}>
+        <span
+          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}
+        >
+          Summer Flights
+        </span>
+
+        <span className={classes["flight__heading__normal"]}>
+          <span>
+            Featured paragliding flight packages for the Summer season
+          </span>{" "}
+          <span className={classes["flight__heading__normal__date"]}>
+            April 16 to December 9
+          </span>
+        </span>
+      </h2>
+      <div className={classes["summer"]}>
         <Flights cardsData={SUMMER_DATA} season="Summer" />
       </div>
     </section>
