@@ -30,23 +30,6 @@ const MenuContextProvider = ({ children }) => {
   //CONTACT MENU
   const [menuContact, setMenuContact] = useState(false);
 
-  // MENU LINK STATE
-
-  //TOP NAV BAR STATE
-  const [menuHomeTopNavBar, setmenuHomeTopNavBar] = useState(false);
-
-  //BOOK MENU
-  const [menuBookTopNavBar, setMenuBookTopNavBar] = useState(false);
-
-  //INFO MENU
-  const [menuInfoTopNavBar, setMenuInfoTopNavBar] = useState(false);
-
-  //PILOT MENU
-  const [menuPilotTopNavBar, setMenuPilotTopNavBar] = useState(false);
-
-  //CONTACT MENU
-  const [menuContactTopNavBar, setMenuContactTopNavBar] = useState(false);
-
   return (
     <MenuContext.Provider
       value={{
@@ -70,20 +53,6 @@ const MenuContextProvider = ({ children }) => {
         setMenuInfo,
         setMenuPilot,
         setMenuContact,
-
-        // top navbar page indicator state
-        menuHomeTopNavBar,
-        menuBookTopNavBar,
-        menuInfoTopNavBar,
-        menuPilotTopNavBar,
-        menuContactTopNavBar,
-
-        // top navbar  page indicator state setters
-        setmenuHomeTopNavBar,
-        setMenuBookTopNavBar,
-        setMenuInfoTopNavBar,
-        setMenuPilotTopNavBar,
-        setMenuContactTopNavBar,
       }}
     >
       {children}

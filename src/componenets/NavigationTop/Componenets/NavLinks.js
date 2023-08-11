@@ -12,74 +12,12 @@ import Router from "next/router";
 
 const NavLinks = ({ sticky }) => {
   // MENU GLOBAL CONTEXT,
-  const { menuHomeTopNavBar } = useMenuContext();
-  const { menuBookTopNavBar } = useMenuContext();
-  const { menuInfoTopNavBar } = useMenuContext();
-  const { menuPilotTopNavBar } = useMenuContext();
-  const { menuContactTopNavBar } = useMenuContext();
-  // MENU GLOBAL CONTEXT,
-  const { setmenuHomeTopNavBar } = useMenuContext();
-  const { setMenuBookTopNavBar } = useMenuContext();
-  const { setMenuInfoTopNavBar } = useMenuContext();
-  const { setMenuPilotTopNavBar } = useMenuContext();
-  const { setMenuContactTopNavBar } = useMenuContext();
-
-  // LOACAL
-
-  const homeWasClicked = () => {
-    // GLOBAL
-    setmenuHomeTopNavBar(true);
-    setMenuBookTopNavBar(false);
-    setMenuInfoTopNavBar(false);
-    setMenuPilotTopNavBar(false);
-    setMenuContactTopNavBar(false);
-  };
-  const bookWasClicked = () => {
-    // GLOBAL
-    setMenuBookTopNavBar(true);
-    setMenuInfoTopNavBar(false);
-    setMenuPilotTopNavBar(false);
-    setmenuHomeTopNavBar(false);
-    setMenuContactTopNavBar(false);
-  };
-
-  const infoWasClicked = () => {
-    // GLOBAL
-    setMenuBookTopNavBar(false);
-    setMenuInfoTopNavBar(true);
-    setMenuPilotTopNavBar(false);
-    setmenuHomeTopNavBar(false);
-    setMenuContactTopNavBar(false);
-  };
-
-  const pilotWasClicked = () => {
-    // GLOBAL
-    setMenuBookTopNavBar(false);
-    setMenuInfoTopNavBar(false);
-    setMenuPilotTopNavBar(true);
-    setmenuHomeTopNavBar(false);
-    setMenuContactTopNavBar(false);
-  };
-
-  const contactWasClicked = () => {
-    // GLOBAL
-    setMenuBookTopNavBar(false);
-    setMenuInfoTopNavBar(false);
-    setMenuPilotTopNavBar(false);
-    setmenuHomeTopNavBar(false);
-    setMenuContactTopNavBar(true);
-  };
 
   return (
     <ul className={classes["link-box"]}>
-      {menuHomeTopNavBar && <LocalProgressBar />}
-      {menuBookTopNavBar && <LocalProgressBar />}
-      {menuInfoTopNavBar && <LocalProgressBar />}
-      {menuPilotTopNavBar && <LocalProgressBar />}
-      {menuContactTopNavBar && <LocalProgressBar />}
       <li className={classes["link-list"]}>
         <Link
-          onClick={homeWasClicked}
+          // onClick={homeWasClicked}
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
@@ -90,7 +28,7 @@ const NavLinks = ({ sticky }) => {
       </li>
       <li className={classes["link-list"]}>
         <Link
-          onClick={bookWasClicked}
+          // onClick={bookWasClicked}
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
@@ -101,7 +39,7 @@ const NavLinks = ({ sticky }) => {
       </li>
       <li className={classes["link-box"]}>
         <Link
-          onClick={infoWasClicked}
+          // onClick={infoWasClicked}
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
@@ -112,7 +50,7 @@ const NavLinks = ({ sticky }) => {
       </li>
       <li className={classes["link-box"]}>
         <Link
-          onClick={pilotWasClicked}
+          // onClick={pilotWasClicked}
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
@@ -123,7 +61,7 @@ const NavLinks = ({ sticky }) => {
       </li>
       <li className={classes["link-box"]}>
         <Link
-          onClick={contactWasClicked}
+          // onClick={contactWasClicked}
           className={`${classes["link"]} ${
             classes[!sticky ? "dark-text" : ""]
           }`}
