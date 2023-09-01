@@ -7,7 +7,7 @@ import Link from "next/link";
 // href="https://wa.link/eiteyy"
 // target="_blank"
 
-const FeaturedFlightCardWinter = ({ img, start, airtime, landing }) => {
+const FeaturedFlightCardWinter = ({ img, start, airtime, landing, price }) => {
   return (
     <div className={classes["test"]}>
       <div className={classes["card"]}>
@@ -24,7 +24,7 @@ const FeaturedFlightCardWinter = ({ img, start, airtime, landing }) => {
           <div className={classes["card__details"]}>
             <ul>
               <li>
-                <p>Pacage Name:</p>
+                <p>Winter Season</p>
                 <p></p>
               </li>
               <li>
@@ -45,7 +45,7 @@ const FeaturedFlightCardWinter = ({ img, start, airtime, landing }) => {
           <div className={classes["card__cta"]}>
             <div className={classes["card__price-box"]}>
               <p className={classes["card__price-only"]}>Only</p>
-              <p className={classes["card__price-value"]}>$297</p>
+              <p className={classes["card__price-value"]}>${price}</p>
             </div>
             <div className={classes["book-now-box"]}>
               <Link

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 
-const FeaturedFlightCardSummer = ({ img, start, airtime, landing }) => {
+const FeaturedFlightCardSummer = ({ img, start, airtime, landing, price }) => {
   return (
     <div className={classes["test"]}>
       <div className={classes["card"]}>
@@ -22,7 +22,7 @@ const FeaturedFlightCardSummer = ({ img, start, airtime, landing }) => {
           <div className={classes["card__details"]}>
             <ul>
               <li>
-                <p>Pacage Name:</p>
+                <p>Summer Season</p>
                 <p></p>
               </li>
               <li>
@@ -43,7 +43,7 @@ const FeaturedFlightCardSummer = ({ img, start, airtime, landing }) => {
           <div className={classes["card__cta"]}>
             <div className={classes["card__price-box"]}>
               <p className={classes["card__price-only"]}>Only</p>
-              <p className={classes["card__price-value"]}>$297</p>
+              <p className={classes["card__price-value"]}>${price}</p>
             </div>
             <div className={classes["book-now-box"]}>
               <Link
