@@ -66,7 +66,7 @@ const WINTER_DATA = [
     airtime: "25-30",
     landing: "2200",
     id: 3,
-    price: "200$",
+    price: "250$",
   },
 ];
 

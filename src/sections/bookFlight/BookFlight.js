@@ -21,32 +21,6 @@ import summerThree from "../../assets/paragliding-summer/paragliding-summer-3.jp
 const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });
 const caveat = Caveat({ subsets: ["latin"], weight: ["400"] });
 
-const WINTER_DATA = [
-  {
-    img: winterOne,
-    start: "3006",
-    airtime: "5-10",
-    landing: "2200",
-    id: 1,
-    price: "100$",
-  },
-  {
-    img: winterTwo,
-    start: "3006",
-    airtime: "5-10",
-    landing: "2200",
-    id: 2,
-    price: "100$",
-  },
-  {
-    img: winterThree,
-    start: "3006",
-    airtime: "5-10",
-    landing: "2200",
-    id: 3,
-    price: "100$",
-  },
-];
 const SUMMER_DATA = [
   {
     img: summerOne,
@@ -59,18 +33,45 @@ const SUMMER_DATA = [
   {
     img: summerTwo,
     start: "3006",
-    airtime: "5-10",
+    airtime: "15-20",
     landing: "2200",
     id: 2,
-    price: "100$",
+    price: "150$",
   },
   {
     img: summerThree,
     start: "3006",
-    airtime: "5-10",
+    airtime: "25 - 30",
     landing: "2200",
     id: 3,
-    price: "100$",
+    price: "200$",
+  },
+];
+
+const WINTER_DATA = [
+  {
+    img: winterOne,
+    start: "3006",
+    airtime: "5-10",
+    landing: "2200",
+    id: 1,
+    price: "120$",
+  },
+  {
+    img: winterTwo,
+    start: "3006",
+    airtime: "15-20",
+    landing: "2200",
+    id: 2,
+    price: "170$",
+  },
+  {
+    img: winterThree,
+    start: "3006",
+    airtime: "25-30",
+    landing: "2200",
+    id: 3,
+    price: "250$",
   },
 ];
 

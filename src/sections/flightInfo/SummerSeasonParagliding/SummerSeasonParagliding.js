@@ -207,18 +207,18 @@ const SummerSeasonParagliding = () => {
     {
       img: summerTwo,
       start: "3006",
-      airtime: "5-10",
+      airtime: "15-20",
       landing: "2200",
       id: 2,
-      price: "100$",
+      price: "150$",
     },
     {
       img: summerThree,
       start: "3006",
-      airtime: "5-10",
+      airtime: "25 - 30",
       landing: "2200",
       id: 3,
-      price: "100$",
+      price: "200$",
     },
   ];
 

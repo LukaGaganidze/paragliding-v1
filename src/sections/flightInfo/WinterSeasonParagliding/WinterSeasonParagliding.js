@@ -155,6 +155,7 @@ const PARTS_DATA = [
 ];
 
 // FLIGHT DATA
+
 const WINTER_DATA = [
   {
     img: winterOne,
@@ -162,23 +163,23 @@ const WINTER_DATA = [
     airtime: "5-10",
     landing: "2200",
     id: 1,
-    price: "100$",
+    price: "120$",
   },
   {
     img: winterTwo,
     start: "3006",
-    airtime: "5-10",
+    airtime: "15-20",
     landing: "2200",
     id: 2,
-    price: "100$",
+    price: "170$",
   },
   {
     img: winterThree,
     start: "3006",
-    airtime: "5-10",
+    airtime: "25-30",
     landing: "2200",
     id: 3,
-    price: "100$",
+    price: "250$",
   },
 ];
 
@@ -186,11 +187,6 @@ const WINTER_DATA = [
 import winterOne from "../../../assets/paragliding-winter/winter-1.jpg";
 import winterTwo from "../../../assets/paragliding-winter/winter-2.jpg";
 import winterThree from "../../../assets/paragliding-winter/winter-3.jpg";
-
-// SUMMER
-import summerOne from "../../../assets/paragliding-summer/paragliding-summer-1.jpg";
-import summerTwo from "../../../assets/paragliding-summer/paragliding-summer-2.jpg";
-import summerThree from "../../../assets/paragliding-summer/paragliding-summer-3.jpg";
 
 const WinterSeasonParagliding = () => {
   // HEADINF
