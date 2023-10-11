@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <TopNavigation />
           <Menu />
         </MenuContextProvider>
-        <BuyMeACoffee />
+        {/* <BuyMeACoffee /> */}
         <HeroSocMediaIcons />
         <main>{children}</main>
         <Footer />
