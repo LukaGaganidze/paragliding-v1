@@ -18,8 +18,7 @@ const MenuHome = ({ className }) => {
         onClick={closeMenu}
         href="https://wa.link/eiteyy"
         target="_blank"
-        className={classes["menu-home__img1-box"]}
-      >
+        className={classes["menu-home__img1-box"]}>
         <div></div>
         <span className={pacifico.className}>Book Flight</span>
       </Link>
@@ -27,17 +26,15 @@ const MenuHome = ({ className }) => {
       <Link
         onClick={closeMenu}
         href={"/#winter"}
-        className={classes["menu-home__img2-box"]}
-      >
+        className={classes["menu-home__img2-box"]}>
         <div></div>
-        <span className={pacifico.className}>Flight Pacages</span>
+        <span className={pacifico.className}>Flight Packages</span>
       </Link>
 
       <Link
         onClick={closeMenu}
         href={"/#pilot"}
-        className={classes["menu-home__img3-box"]}
-      >
+        className={classes["menu-home__img3-box"]}>
         <div></div>
         <span className={pacifico.className}>Your Pilot</span>
       </Link>
