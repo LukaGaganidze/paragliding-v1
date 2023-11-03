@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import classes from "./BiographyExperience.module.scss";
 
-import secImage from "../../../assets/pages/pilot/biography.png";
+import secImage from "../../../assets/pages/pilot/biography.jpg";
 
 import { Pacifico } from "next/font/google";
 
@@ -56,8 +56,7 @@ const BiographyExperience = () => {
         <span className={classes["experience__heading__bio"]}>
           Biography
           <span
-            className={`${pacifico.className} ${classes["experience__heading__letter"]}`}
-          >
+            className={`${pacifico.className} ${classes["experience__heading__letter"]}`}>
             B
           </span>
         </span>
@@ -66,8 +65,7 @@ const BiographyExperience = () => {
           <span>Experience</span>
 
           <span
-            className={`${pacifico.className} ${classes["experience__heading__letter"]}`}
-          >
+            className={`${pacifico.className} ${classes["experience__heading__letter"]}`}>
             E
           </span>
         </span>
@@ -79,8 +77,7 @@ const BiographyExperience = () => {
         <div
           className={`${classes["content__img"]} ${
             intersection ? classes["content__img__active"] : ""
-          }`}
-        >
+          }`}>
           <Image src={secImage} alt="pilot picture with passenger" />
         </div>
 
@@ -88,8 +85,7 @@ const BiographyExperience = () => {
         <p
           className={`${classes["content__text"]} ${
             intersection ? classes["content__text__active"] : ""
-          }`}
-        >
+          }`}>
           <span>
             <span className={classes["content__text__special"]}>
               Omar Barabadze

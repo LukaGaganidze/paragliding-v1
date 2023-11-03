@@ -22,7 +22,7 @@ const WinterHalf = () => {
             <span className={classes["winter-half__info__description"]}>
               Flight Duration:
             </span>{" "}
-            20 - 35 minutes
+            10 - 30 minutes
           </li>
           <li>
             <span className={classes["winter-half__info__description"]}>

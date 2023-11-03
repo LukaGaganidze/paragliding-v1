@@ -63,12 +63,12 @@ const PARTS_DATA = [
       <>
         Take to the skies at impressive altitudes, <span>starting</span> your{" "}
         <span>flight</span> from an{" "}
-        <span>elevation of 2750 to 3006 meters above sea level.</span> As you
-        soar through the winter air, you'll enjoy an average{" "}
-        <span> airtime of 15-25 minutes</span>, allowing you to savor every
+        <span>elevation of 3006 meters above sea level.</span> As you soar
+        through the winter air, you'll enjoy an average{" "}
+        <span> airtime of 10-30 minutes</span>, allowing you to savor every
         moment of the adventure. Your <span>landing spot</span> awaits at a
-        height of <span>2200 meters above sea level</span>, offering a smooth
-        and gentle descent back to the earth.
+        height of <span>1500-2200 meters above sea level</span>, offering a
+        smooth and gentle descent back to the earth.
       </>
     ),
     imgLeftSide: true,
@@ -82,7 +82,8 @@ const PARTS_DATA = [
       <>
         Our winter paragliding packages come complete with{" "}
         <span>everything you need</span> for a comfortable and thrilling flight.
-        The flight price includes: <span>HD quality video:</span>
+        The flight price includes: <span>HD quality video:</span>{" "}
+        <span>Longer Flights and Acrobatics.</span>
         Capture every exhilarating moment of your flight in stunning clarity
         with our high-definition video recording. <span>
           Warm clothing:
@@ -160,26 +161,29 @@ const WINTER_DATA = [
   {
     img: winterOne,
     start: "3006",
-    airtime: "5-10",
-    landing: "2200",
+    airtime: "25 - 30",
+    landing: "1500",
     id: 1,
-    price: "120$",
+    price: "500GEL",
+    flightType: "Long Flight",
   },
   {
     img: winterTwo,
     start: "3006",
-    airtime: "15-20",
+    airtime: "10 - 15",
     landing: "2200",
     id: 2,
-    price: "170$",
+    price: "400GEL",
+    flightType: "Standart",
   },
   {
     img: winterThree,
     start: "3006",
-    airtime: "25-30",
+    airtime: "10+",
     landing: "2200",
     id: 3,
-    price: "250$",
+    price: "450GEL",
+    flightType: "Acrobatics",
   },
 ];
 
@@ -234,8 +238,7 @@ const WinterSeasonParagliding = () => {
         ref={headingRef}
         className={`${classes[seasonVisible ? "winter-sec__active" : ""]} ${
           classes["winter-sec__heading"]
-        }`}
-      >
+        }`}>
         Winter Season Paragliding
         <span className={pacifico.className}>WINTER</span>
       </h2>

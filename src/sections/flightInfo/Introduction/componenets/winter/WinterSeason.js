@@ -25,7 +25,7 @@ const WinterSeason = () => {
             <span className={classes["winter__info__description"]}>
               Flight Duration:
             </span>{" "}
-            20 - 35 minutes
+            10 - 30 minutes
           </li>
           <li>
             <span className={classes["winter__info__description"]}>
@@ -46,8 +46,7 @@ const WinterSeason = () => {
         </Link>
         <a
           className={classes["winter__action__more-info"]}
-          href={"#winter-season"}
-        >
+          href={"#winter-season"}>
           <span></span> <span>More Info About Winter Flight</span>
         </a>
       </div>

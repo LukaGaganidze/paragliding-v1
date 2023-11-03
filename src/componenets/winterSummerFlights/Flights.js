@@ -49,8 +49,7 @@ const WinterFlights = ({ season, cardsData }) => {
       ref={seasonRef}
       className={`${classes["flight"]} ${classes["season-in"]}  ${
         seasonVisible ? classes["season-in__active"] : ""
-      }`}
-    >
+      }`}>
       <ul className={classes["flight__featured"]}>
         {cardsData.map((el) => (
           <li key={el.id} className={classes["flight__featured__li"]}>
@@ -61,6 +60,7 @@ const WinterFlights = ({ season, cardsData }) => {
                 airtime={el.airtime}
                 landing={el.landing}
                 price={el.price}
+                flightType={el.flightType}
               />
             ) : (
               <FeaturedFlightCardSummer
@@ -69,6 +69,7 @@ const WinterFlights = ({ season, cardsData }) => {
                 airtime={el.airtime}
                 landing={el.landing}
                 price={el.price}
+                flightType={el.flightType}
               />
             )}
           </li>

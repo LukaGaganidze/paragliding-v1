@@ -107,11 +107,11 @@ const SummerSeasonParagliding = () => {
       text: (
         <>
           Embark on your <span>summer flight</span> at an impressive altitude,
-          <span>starting from 2750 to 3006 meters above sea level</span>. As you
+          <span>starting from 2300 to 3500 meters above sea level</span>. As you
           glide through the summer air, enjoy an average{" "}
-          <span>airtime of 15-25 minutes</span>, allowing you to fully immerse
+          <span>airtime of 10-30 minutes</span>, allowing you to fully immerse
           yourself in the breathtaking views and sensations. Your landing awaits
-          at a height of 2200 meters above sea level, ensuring a smooth and
+          at a height of 1500-2200 meters above sea level, ensuring a smooth and
           gentle descent back to the earth.
         </>
       ),
@@ -126,9 +126,10 @@ const SummerSeasonParagliding = () => {
         <>
           Our summer paragliding packages come complete with{" "}
           <span>everything you need</span> for a comfortable and thrilling
-          flight. The flight price includes: <span>HD quality video</span>.
-          <span>Warm clothing</span>: Even in the summer, we ensure your comfort
-          with specially provided warm clothing for higher altitudes.
+          flight. The flight price includes: <span>HD quality video</span>.{" "}
+          <span>Longer Flights and Acrobatics</span>. <span>Warm clothing</span>
+          : Even in the summer, we ensure your comfort with specially provided
+          warm clothing for higher altitudes.
           <span>Gloves and flight equipment</span>: For your convenience and
           safety, we offer gloves and all necessary flight equipment to enhance
           your summer paragliding experience.
@@ -179,14 +180,14 @@ const SummerSeasonParagliding = () => {
     },
     {
       image: mainImg7,
-      heading: "Prepare for Your Flight",
+      heading: "  Book Your Summer Paragliding Adventure",
       text: (
         <>
-          <span>Prepare for Your Flight</span>: As you prepare for your summer
-          paragliding adventure, ensure you wear comfortable clothing suitable
-          for the weather. Don't forget to bring your sense of adventure and
-          enthusiasm as our professional pilots guide you through a safe and
-          exhilarating flight.
+          Are you ready to embark on an extraordinary Summer paragliding journey
+          in Gudauri? <span>Book your flight now</span> and prepare to
+          experience the magic of soaring in clouds.{" "}
+          <span>Our team is excited to welcome you</span> to this thrilling
+          Summer adventure!
         </>
       ),
       imgLeftSide: true,
@@ -198,27 +199,32 @@ const SummerSeasonParagliding = () => {
   const SUMMER_DATA = [
     {
       img: summerOne,
-      start: "3006",
-      airtime: "5-10",
-      landing: "2200",
+      start: "2300-3500",
+      airtime: "25 - 30",
+      landing: "1500",
       id: 1,
-      price: "100$",
+      price: "500GEL",
+      flightType: "Long Flight",
     },
     {
       img: summerTwo,
-      start: "3006",
-      airtime: "15-20",
+      start: "2300",
+      airtime: "10 - 15",
       landing: "2200",
       id: 2,
-      price: "150$",
+      price: "400GEL",
+
+      flightType: "Standart",
     },
     {
       img: summerThree,
-      start: "3006",
-      airtime: "25 - 30",
+      start: "2300",
+      airtime: "10+",
       landing: "2200",
       id: 3,
-      price: "200$",
+      price: "450GEL",
+
+      flightType: "Acrobatics",
     },
   ];
 
@@ -228,8 +234,7 @@ const SummerSeasonParagliding = () => {
         ref={headingRef}
         className={`${classes[seasonVisible ? "summer-sec__active" : ""]} ${
           classes["summer-sec__heading"]
-        }`}
-      >
+        }`}>
         Summer Season Paragliding
         <span className={pacifico.className}>SUMMER</span>
       </h2>

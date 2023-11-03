@@ -19,27 +19,32 @@ const bagel = Lilita_One({ subsets: ["latin"], weight: ["400"] });
 const SUMMER_DATA = [
   {
     img: summerOne,
-    start: "3006",
-    airtime: "5-10",
-    landing: "2200",
+    start: "2300-3500",
+    airtime: "25 - 30",
+    landing: "1500",
     id: 1,
-    price: "100$",
+    price: "500GEL",
+    flightType: "Long Flight",
   },
   {
     img: summerTwo,
-    start: "3006",
-    airtime: "15-20",
+    start: "2300",
+    airtime: "10 - 15",
     landing: "2200",
     id: 2,
-    price: "150$",
+    price: "400GEL",
+
+    flightType: "Standart",
   },
   {
     img: summerThree,
-    start: "3006",
-    airtime: "25 - 30",
+    start: "2300",
+    airtime: "10+",
     landing: "2200",
     id: 3,
-    price: "200$",
+    price: "450GEL",
+
+    flightType: "Acrobatics",
   },
 ];
 
@@ -47,26 +52,29 @@ const WINTER_DATA = [
   {
     img: winterOne,
     start: "3006",
-    airtime: "5-10",
-    landing: "2200",
+    airtime: "25 - 30",
+    landing: "1500",
     id: 1,
-    price: "120$",
+    price: "500GEL",
+    flightType: "Long Flight",
   },
   {
     img: winterTwo,
     start: "3006",
-    airtime: "15-20",
+    airtime: "10 - 15",
     landing: "2200",
     id: 2,
-    price: "170$",
+    price: "400GEL",
+    flightType: "Standart",
   },
   {
     img: winterThree,
     start: "3006",
-    airtime: "25-30",
+    airtime: "10+",
     landing: "2200",
     id: 3,
-    price: "250$",
+    price: "450GEL",
+    flightType: "Acrobatics",
   },
 ];
 
@@ -86,8 +94,7 @@ const FeaturedFlight = () => {
       {/* HEAEDING */}
       <h2 id="winter" className={classes["flight__heading"]}>
         <span
-          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}
-        >
+          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}>
           Winter Flights
         </span>
 
@@ -110,8 +117,7 @@ const FeaturedFlight = () => {
       {/* HEAEDING */}
       <h2 id="summer" className={classes["flight__heading"]}>
         <span
-          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}
-        >
+          className={`${bagel.className} ${classes["flight__heading__highlited"]}`}>
           Summer Flights
         </span>
 

@@ -24,27 +24,32 @@ const caveat = Caveat({ subsets: ["latin"], weight: ["400"] });
 const SUMMER_DATA = [
   {
     img: summerOne,
-    start: "3006",
-    airtime: "5-10",
-    landing: "2200",
+    start: "2300-3500",
+    airtime: "25 - 30",
+    landing: "1500",
     id: 1,
-    price: "100$",
+    price: "500GEL",
+    flightType: "Long Flight",
   },
   {
     img: summerTwo,
-    start: "3006",
-    airtime: "15-20",
+    start: "2300",
+    airtime: "10 - 15",
     landing: "2200",
     id: 2,
-    price: "150$",
+    price: "400GEL",
+
+    flightType: "Standart",
   },
   {
     img: summerThree,
-    start: "3006",
-    airtime: "25 - 30",
+    start: "2300",
+    airtime: "10+",
     landing: "2200",
     id: 3,
-    price: "200$",
+    price: "450GEL",
+
+    flightType: "Acrobatics",
   },
 ];
 
@@ -52,26 +57,29 @@ const WINTER_DATA = [
   {
     img: winterOne,
     start: "3006",
-    airtime: "5-10",
-    landing: "2200",
+    airtime: "25 - 30",
+    landing: "1500",
     id: 1,
-    price: "120$",
+    price: "500GEL",
+    flightType: "Long Flight",
   },
   {
     img: winterTwo,
     start: "3006",
-    airtime: "15-20",
+    airtime: "10 - 15",
     landing: "2200",
     id: 2,
-    price: "170$",
+    price: "400GEL",
+    flightType: "Standart",
   },
   {
     img: winterThree,
     start: "3006",
-    airtime: "25-30",
+    airtime: "10+",
     landing: "2200",
     id: 3,
-    price: "250$",
+    price: "450GEL",
+    flightType: "Acrobatics",
   },
 ];
 
@@ -83,20 +91,17 @@ const BookFlight = () => {
       <div className={classes["book-flight__pacages"]}>
         <h2
           id="winter-pacages"
-          className={classes["book-flight__pacages__heading"]}
-        >
+          className={classes["book-flight__pacages__heading"]}>
           Choose your flight package
           <span
-            className={`${pacifico.className} ${classes["background-text"]}`}
-          >
+            className={`${pacifico.className} ${classes["background-text"]}`}>
             C
           </span>
         </h2>
         <div className={classes["book-flight__winter"]}>
           <h2 className={classes["flight__heading"]}>
             <span
-              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__winter"]}`}
-            >
+              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__winter"]}`}>
               Winter Flights
             </span>
           </h2>
@@ -110,8 +115,7 @@ const BookFlight = () => {
         <div id="summer-pacages" className={classes["book-flight__summer"]}>
           <h2 className={classes["flight__heading"]}>
             <span
-              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__summer"]}`}
-            >
+              className={`${caveat.className} ${classes["flight__heading__highlited"]} ${classes["flight__heading__highlited__summer"]}`}>
               Summer Flights
             </span>
           </h2>

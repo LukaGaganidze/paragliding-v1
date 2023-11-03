@@ -23,7 +23,7 @@ const SummerHalf = () => {
             <span className={classes["summer-half__info__description"]}>
               Flight Duration:
             </span>{" "}
-            20 - 35 minutes
+            10 - 30 minutes
           </li>
           <li>
             <span className={classes["summer-half__info__description"]}>

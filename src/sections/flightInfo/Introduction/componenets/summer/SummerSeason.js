@@ -21,7 +21,7 @@ const SummerSeason = () => {
             <span className={classes["summer__info__description"]}>
               Flight Duration:
             </span>{" "}
-            20 - 35 minutes
+            10 - 30 minutes
           </li>
           <li>
             <span className={classes["summer__info__description"]}>
@@ -43,8 +43,7 @@ const SummerSeason = () => {
         </Link>
         <a
           className={classes["summer__action__more-info"]}
-          href={"#summer-season"}
-        >
+          href={"#summer-season"}>
           <span></span> <span>More Info About Summer Flight</span>
         </a>
       </div>
